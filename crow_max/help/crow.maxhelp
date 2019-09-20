@@ -58,7 +58,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 0.0, 26.0, 650.0, 454.0 ],
+						"rect" : [ 150.0, 139.0, 650.0, 454.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 10.0,
@@ -95,8 +95,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 543.5, 210.0, 101.0, 31.0 ],
-									"presentation_linecount" : 2,
+									"patching_rect" : [ 540.0, 210.0, 101.0, 31.0 ],
 									"text" : "print current script in flash"
 								}
 
@@ -135,8 +134,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 375.0, 210.0, 114.0, 31.0 ],
-									"presentation_linecount" : 2,
+									"patching_rect" : [ 375.0, 210.0, 116.0, 31.0 ],
 									"text" : "clear onboard flash, useful for crashes"
 								}
 
@@ -176,7 +174,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 210.0, 210.0, 114.0, 31.0 ],
-									"presentation_linecount" : 2,
 									"text" : "evaluate imported code, write to flash"
 								}
 
@@ -216,7 +213,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 60.0, 210.0, 92.0, 31.0 ],
-									"presentation_linecount" : 2,
 									"text" : "start importing code to buffer"
 								}
 
@@ -255,8 +251,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 345.0, 145.0, 116.0, 31.0 ],
-									"presentation_linecount" : 3,
+									"patching_rect" : [ 345.0, 145.0, 119.0, 31.0 ],
 									"text" : "reboots crow, resets USB connection"
 								}
 
@@ -296,7 +291,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 180.0, 145.0, 113.0, 31.0 ],
-									"presentation_linecount" : 2,
 									"text" : "version of firmware on connected crow"
 								}
 
@@ -336,7 +330,6 @@
 									"numinlets" : 1,
 									"numoutlets" : 0,
 									"patching_rect" : [ 41.0, 145.0, 96.0, 31.0 ],
-									"presentation_linecount" : 2,
 									"text" : "identity of connected crow"
 								}
 
@@ -6619,7 +6612,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 150.0, 139.0, 650.0, 454.0 ],
+						"rect" : [ 0.0, 26.0, 650.0, 454.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 11.0,

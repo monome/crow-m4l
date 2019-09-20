@@ -115,7 +115,7 @@
 				"box" : 				{
 					"comment" : "Bang when crow device chosen",
 					"id" : "obj-7",
-					"index" : 2,
+					"index" : 0,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -152,7 +152,7 @@
 				"box" : 				{
 					"comment" : "Messages from crow",
 					"id" : "obj-4",
-					"index" : 3,
+					"index" : 0,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -737,8 +737,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "bang" ],
-									"patching_rect" : [ 350.0, 101.0, 51.0, 22.0 ],
-									"text" : "metro 5"
+									"patching_rect" : [ 350.0, 101.0, 56.0, 22.0 ],
+									"text" : "qmetro 5"
 								}
 
 							}
@@ -978,7 +978,7 @@
 				"box" : 				{
 					"comment" : "Commands from crow",
 					"id" : "obj-22",
-					"index" : 1,
+					"index" : 0,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -990,7 +990,7 @@
 				"box" : 				{
 					"comment" : "Send messages to crow",
 					"id" : "obj-20",
-					"index" : 1,
+					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -1140,7 +1140,16 @@
 				}
 
 			}
- ]
+ ],
+		"dependency_cache" : [ 			{
+				"name" : "crowmax.lua",
+				"bootpath" : "~/permanent storage projects/crow tests - ignore/crow_m4l",
+				"patcherrelativepath" : ".",
+				"type" : "Jlua",
+				"implicit" : 1
+			}
+ ],
+		"autosave" : 0
 	}
 
 }

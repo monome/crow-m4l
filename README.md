@@ -70,7 +70,7 @@ The `crow_m4l` folder holds a suite of devices to help integrate your modular wi
 ---
 
 #### ^^ins
-- an *input* device
+- an *input* device to translate incoming CV to useful MIDI data
 - load onto any MIDI track
 - click the `^^` button in the top-left of the m4l device to link a connected crow to **^^ins**
 - expand the `(input)` dropdown to identify which hardware input you'd like to monitor / control Live: 1 or 2
@@ -90,3 +90,11 @@ The `crow_m4l` folder holds a suite of devices to help integrate your modular wi
 - *(trig src)*: identify whether you would like the CV conversion to take place synced to Live's clock (arpeggiator) or if you'd like the conversion to take place every time a trigger is received through the *other* input of crow.
 - *low*: set the desired floor for CV-to-MIDI, default is lowest note at 36
 - *high* set the desired ceiling for CV-to-MIDI, default is highest note at 127
+
+---
+#### ^^outs
+- an *output* device that collects multiple utilities in a single interface
+- load onto any MIDI track + either arm it for record or set the monitoring to "in"
+- click the `^^` button in the center-bottom of the m4l device to link a connected crow to **^^outs**
+- expand the `(out)` dropdown to identify which hardware output you'd like to use (nb. you can instantiate this device up to four times in a Live set)
+- 

@@ -42,6 +42,9 @@ The `crow_m4l` folder holds a suite of devices to help integrate your modular wi
 ---
 
 #### **^^dual**
+
+<img src="https://github.com/monome/crow-max/blob/master/images/m4l_dual.png" width="150">
+
 - an *output* device to translate MIDI data from Live to v/8 and envelope voltages
 - load onto any MIDI track + either arm it for record or set the monitoring to "in"
 - click the `^^` button in the bottom left corner to link a connected crow to **^^dual**
@@ -51,7 +54,7 @@ The `crow_m4l` folder holds a suite of devices to help integrate your modular wi
 
 ~~
 
-- *base*: which MIDI note represents middle-C, default is 60
+- *base*: the MIDI note which represents middle-C, default is 60
 - *slew*: adds glide between notes, default is none
 - *attack*: shapes the start of the envelope, default is nearly zero
 - *decay*: shapes the end of the envelope, default is very snappy / trigger-style
@@ -59,6 +62,9 @@ The `crow_m4l` folder holds a suite of devices to help integrate your modular wi
 ---
 
 #### ^^jf_synth
+
+<img src="https://github.com/monome/crow-max/blob/master/images/m4l_jf-synth.png" width="150">
+
 - an *i2c output* device to play a connected Just Friends module as a 6-voice polyphonic synth through Live
 - requires Just Friends (Whimsical Raps) to be connected via i2c cable
 - load onto any MIDI track + either arm it for record or set the monitoring to "in"
@@ -70,6 +76,9 @@ The `crow_m4l` folder holds a suite of devices to help integrate your modular wi
 ---
 
 #### ^^ins
+
+<img src="https://github.com/monome/crow-max/blob/master/images/m4l_ins.png" width="400">
+
 - an *input* device to translate incoming CV to useful MIDI data
 - load onto any MIDI track
 - click the `^^` button in the top-left of the m4l device to link a connected crow to **^^ins**
@@ -93,8 +102,53 @@ The `crow_m4l` folder holds a suite of devices to help integrate your modular wi
 
 ---
 #### ^^outs
+
+<img src="https://github.com/monome/crow-max/blob/master/images/m4l_outs-setup.png" width="200">
+
 - an *output* device that collects multiple utilities in a single interface
 - load onto any MIDI track + either arm it for record or set the monitoring to "in"
 - click the `^^` button in the center-bottom of the m4l device to link a connected crow to **^^outs**
 - expand the `(out)` dropdown to identify which hardware output you'd like to use (nb. you can instantiate this device up to four times in a Live set)
-- 
+
+nb. the device will display the selected output in the top right corner of the following screens:
+
+~~
+
+*v/8*
+
+<img src="https://github.com/monome/crow-max/blob/master/images/m4l_outs-v-8.png" width="200">
+
+- *base*: the MIDI note which represents middle-C, default is 60
+- *slew*: adds glide between notes, default is none
+
+~~
+
+*clock*
+
+<img src="https://github.com/monome/crow-max/blob/master/images/m4l_outs-clock.png" width="200">
+
+- *rate*: the rate of clock pulses, synced to Live's transport + tempo, default quarter notes
+- *trigger*: set the max voltage for the trigger signal, default 5V
+- *gate*: toggle behavior for *trigger* which will reveal % duty cycle of current clock rate, default 50%
+- *polarity*: whether triggers are a burst of voltage or an absence of voltage in a continuous on-state, default is 1/burst
+
+~~
+
+*shapes*
+
+<img src="https://github.com/monome/crow-max/blob/master/images/m4l_outs-shapes.png" width="200">
+
+- *rate*: the rate of a positive LFO, synced to Live's transport + tempo, default 1 bar
+- *level*: the high voltage for the LFO to reach before falling to 0V, default 5V
+
+~~
+
+*remote*
+
+<img src="https://github.com/monome/crow-max/blob/master/images/m4l_outs-remote.png" width="200">
+
+- *knob*: an automatable knob which sends any movement out as CV
+- *min*: the minimum CV the knob can put out when the needle is far-left, default -5V
+- *max* the maximum CV the knob can put out when the needle is far-right, default 5V
+- *bias*: adds an offset to the knob's current position, default 0V
+- *smooth*: adds glide between knob values, default 50ms

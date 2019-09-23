@@ -21,7 +21,7 @@
 		"gridsnaponopen" : 1,
 		"objectsnaponopen" : 1,
 		"statusbarvisible" : 2,
-		"toolbarvisible" : 1,
+		"toolbarvisible" : 0,
 		"lefttoolbarpinned" : 0,
 		"toptoolbarpinned" : 0,
 		"righttoolbarpinned" : 0,
@@ -29,8 +29,8 @@
 		"toolbars_unpinned_last_save" : 0,
 		"tallnewobj" : 0,
 		"boxanimatetime" : 200,
-		"enablehscroll" : 1,
-		"enablevscroll" : 1,
+		"enablehscroll" : 0,
+		"enablevscroll" : 0,
 		"devicewidth" : 181.0,
 		"description" : "",
 		"digest" : "",
@@ -115,7 +115,7 @@
 				"box" : 				{
 					"comment" : "Bang when crow device chosen",
 					"id" : "obj-7",
-					"index" : 0,
+					"index" : 2,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -152,7 +152,7 @@
 				"box" : 				{
 					"comment" : "Messages from crow",
 					"id" : "obj-4",
-					"index" : 0,
+					"index" : 3,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -171,7 +171,7 @@
 					"bgfillcolor_proportion" : 0.5,
 					"bgfillcolor_type" : "color",
 					"id" : "obj-2",
-					"items" : [ "Bluetooth-Incoming-Port", ",", "usbmodem3072357931371" ],
+					"items" : "Bluetooth-Incoming-Port",
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -978,7 +978,7 @@
 				"box" : 				{
 					"comment" : "Commands from crow",
 					"id" : "obj-22",
-					"index" : 0,
+					"index" : 1,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -990,7 +990,7 @@
 				"box" : 				{
 					"comment" : "Send messages to crow",
 					"id" : "obj-20",
-					"index" : 0,
+					"index" : 1,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -1082,7 +1082,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-10", 0 ],
-					"midpoints" : [ 90.5, 282.0, 33.0, 282.0, 33.0, 315.0, 46.0, 315.0 ],
+					"midpoints" : [ 90.5, 324.0, 46.0, 324.0 ],
 					"order" : 1,
 					"source" : [ "obj-2", 1 ]
 				}
@@ -1140,16 +1140,7 @@
 				}
 
 			}
- ],
-		"dependency_cache" : [ 			{
-				"name" : "crowmax.lua",
-				"bootpath" : "~/permanent storage projects/crow tests - ignore/crow_m4l",
-				"patcherrelativepath" : ".",
-				"type" : "Jlua",
-				"implicit" : 1
-			}
- ],
-		"autosave" : 0
+ ]
 	}
 
 }

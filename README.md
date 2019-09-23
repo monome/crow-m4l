@@ -25,6 +25,11 @@ To access, instantiate `crow` and right-click the object. Select "Open crow Help
 - **i2c**: demonstrates i2c connectivity + simple interactions with Just Friends (Whimsical Raps). this seemed the most interesting application, though the fundamental approach is translatable to any i2c device that has pre-defined Teletype interactions (w/, ER-301, Ansible, etc).
 - **^^**: an index of system commands that report on connected hardware + flash new scripts to the module.
 
+### The standalone ^^bootloader patch
+To help make flashing new crow firmware easy, we've included a straightforward Max patch that walks through the necessary steps:
+
+<img src="https://github.com/monome/crow-max/blob/master/images/bootloader_ss.png" width="300">
+
 ## Max for Live installation
 nb. Max installation is **not** required to use the devices in `crow_m4l`.
 
@@ -54,7 +59,7 @@ The `crow_m4l` folder holds a suite of devices to help integrate your modular wi
 
 ~~
 
-- *base*: the MIDI note which represents middle-C, default is 60
+- *base*: the central point for MIDI-to-CV conversion, default is MIDI note 60
 - *slew*: adds glide between notes, default is none
 - *attack*: shapes the start of the envelope, default is nearly zero
 - *decay*: shapes the end of the envelope, default is very snappy / trigger-style
@@ -118,7 +123,7 @@ nb. the device will display the selected output in the top right corner of the f
 
 <img src="https://github.com/monome/crow-max/blob/master/images/m4l_outs-v-8.png" width="200">
 
-- *base*: the MIDI note which represents middle-C, default is 60
+- *base*: the central point for MIDI-to-CV conversion, default is MIDI note 60
 - *slew*: adds glide between notes, default is none
 
 ~~

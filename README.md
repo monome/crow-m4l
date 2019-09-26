@@ -144,7 +144,7 @@ nb. you can instantiate this device up to four times in a Live set, to speak to 
 - *rate*: the rate of clock pulses, synced to Live's transport + tempo, default quarter notes
 - *trigger*: set the max voltage for the trigger signal, default 5V
 - *gate*: toggle behavior for *trigger* which will reveal % duty cycle of current clock rate, default 50%
-- *polarity*: whether triggers are a burst of voltage or an absence of voltage in a continuous on-state, default is 1/burst
+- *polarity*: whether triggers are a burst of voltage or an absence of voltage in a continuous on-state, default is + (burst)
 
 ~~
 

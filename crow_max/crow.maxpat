@@ -57,7 +57,8 @@
 					"patching_rect" : [ 127.0, 165.5, 46.0, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 127.0, 165.5, 46.0, 22.0 ],
-					"text" : "refresh"
+					"text" : "refresh",
+					"textcolor" : [ 0.996078431372549, 0.996078431372549, 0.996078431372549, 1.0 ]
 				}
 
 			}
@@ -115,7 +116,7 @@
 				"box" : 				{
 					"comment" : "Bang when crow device chosen",
 					"id" : "obj-7",
-					"index" : 2,
+					"index" : 0,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -152,7 +153,7 @@
 				"box" : 				{
 					"comment" : "Messages from crow",
 					"id" : "obj-4",
-					"index" : 3,
+					"index" : 0,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -179,7 +180,8 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 8.0, 188.5, 165.0, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 8.0, 188.5, 165.0, 22.0 ]
+					"presentation_rect" : [ 8.0, 188.5, 165.0, 22.0 ],
+					"textcolor" : [ 0.996078431372549, 0.996078431372549, 0.996078431372549, 1.0 ]
 				}
 
 			}
@@ -978,7 +980,7 @@
 				"box" : 				{
 					"comment" : "Commands from crow",
 					"id" : "obj-22",
-					"index" : 1,
+					"index" : 0,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -990,7 +992,7 @@
 				"box" : 				{
 					"comment" : "Send messages to crow",
 					"id" : "obj-20",
-					"index" : 1,
+					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -1017,7 +1019,7 @@
 				"box" : 				{
 					"id" : "obj-1",
 					"maxclass" : "newobj",
-					"numinlets" : 3,
+					"numinlets" : 2,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 275.0, 217.5, 233.0, 22.0 ],
@@ -1140,7 +1142,16 @@
 				}
 
 			}
- ]
+ ],
+		"dependency_cache" : [ 			{
+				"name" : "crowmax.lua",
+				"bootpath" : "~/Downloads/crow-max-master-2/crow_max",
+				"patcherrelativepath" : ".",
+				"type" : "Jlua",
+				"implicit" : 1
+			}
+ ],
+		"autosave" : 0
 	}
 
 }

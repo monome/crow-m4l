@@ -46,13 +46,24 @@ The `crow_m4l` folder holds a suite of devices to help integrate your modular wi
 
 ---
 
+### **^^command_center**
+<img src="https://github.com/monome/crow-max/blob/master/images/m4l_command-center.png" width="150">
+
+nb. the m4l devices that follow will not connect to crow unless `^^command_center` is properly initialized
+
+- a *connector* between crow and Live
+- load onto any MIDI track
+- select your connected crow device from the dropdown
+- don't see your crow? hit 'refresh'
+
+---
+
 #### **^^dual**
 
 <img src="https://github.com/monome/crow-max/blob/master/images/m4l_dual.png" width="150">
 
 - an *output* device to translate MIDI data from Live to v/8 and envelope voltages
 - load onto any MIDI track + either arm it for record or set the monitoring to "in"
-- click the `^^` button in the bottom left corner to link a connected crow to **^^dual**
 - expand the `(outs)` dropdown to identify which duo of outputs you'd like **^^dual** to use for v/8 and envelope voltage: ouputs 1+2 or outputs 3+4
 - output 1/3 will send v/8
 - output 2/4 will send either an envelope or a trigger for every note-on event
@@ -66,27 +77,12 @@ The `crow_m4l` folder holds a suite of devices to help integrate your modular wi
 
 ---
 
-#### ^^jf_synth
-
-<img src="https://github.com/monome/crow-max/blob/master/images/m4l_jf-synth.png" width="150">
-
-- an *i2c output* device to play a connected Just Friends module as a 6-voice polyphonic synth through Live
-- requires Just Friends (Whimsical Raps) to be connected via i2c cable
-- load onto any MIDI track + either arm it for record or set the monitoring to "in"
-- click the `^^` button in the middle of the m4l device to link a connected crow to **^^jf_synth**
-- on your Just Friends module's panel, engage `sound` and `transient`
-- on the m4l device, engage the toggle in the bottom left corner to connect to Just Friends
-- you should now be able to play Just Friends through MIDI
-
----
-
 #### ^^ins
 
 <img src="https://github.com/monome/crow-max/blob/master/images/m4l_ins.png" width="400">
 
 - an *input* device to translate incoming CV to useful MIDI data
 - load onto any MIDI track
-- click the `^^` button in the top-left of the m4l device to link a connected crow to **^^ins**
 - expand the `(input)` dropdown to identify which hardware input you'd like to monitor / control Live: 1 or 2
 - *input cv*: real-time streaming monitor of voltage incoming through the input specified
 
@@ -106,16 +102,29 @@ The `crow_m4l` folder holds a suite of devices to help integrate your modular wi
 - *high* set the desired ceiling for CV-to-MIDI, default is highest note at 127
 
 ---
+
+#### ^^jf_synth
+
+<img src="https://github.com/monome/crow-max/blob/master/images/m4l_jf-synth.png" width="150">
+
+- an *i2c output* device to play a connected Just Friends module as a 6-voice polyphonic synth through Live
+- requires Just Friends (Whimsical Raps) to be connected via i2c cable
+- load onto any MIDI track + either arm it for record or set the monitoring to "in"
+- on your Just Friends module's panel, engage `sound` and `transient`
+- on the m4l device, engage the toggle in the middle to connect to Just Friends
+- you should now be able to play Just Friends through MIDI
+
+---
 #### ^^outs
 
 <img src="https://github.com/monome/crow-max/blob/master/images/m4l_outs-setup.png" width="200">
 
+nb. you can instantiate this device up to four times in a Live set, to speak to each of the four hardware outputs on crow
+
 - an *output* device that collects multiple utilities in a single interface
 - load onto any MIDI track + either arm it for record or set the monitoring to "in"
-- click the `^^` button in the center-bottom of the m4l device to link a connected crow to **^^outs**
-- expand the `(out)` dropdown to identify which hardware output you'd like to use (nb. you can instantiate this device up to four times in a Live set)
-
-nb. the device will display the selected output in the top right corner of the following screens:
+- expand the `(out)` dropdown to identify which hardware output you'd like to use
+- the device will display the selected output in the top right corner of the following screens:
 
 ~~
 
@@ -139,9 +148,9 @@ nb. the device will display the selected output in the top right corner of the f
 
 ~~
 
-*shapes*
+*lfo*
 
-<img src="https://github.com/monome/crow-max/blob/master/images/m4l_outs-shapes.png" width="200">
+<img src="https://github.com/monome/crow-max/blob/master/images/m4l_outs-lfo.png" width="200">
 
 - *rate*: the rate of a positive LFO, synced to Live's transport + tempo, default 1 bar
 - *level*: the high voltage for the LFO to reach before falling to 0V, default 5V

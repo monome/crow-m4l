@@ -35,6 +35,7 @@ You can either open it from inside the `crow_max` folder **or** by opening a new
 After loading new firmware, you will need to re-establish the connection between Max and the crow module but there is no need to reboot your modular.
 
 ## Max for Live installation
+
 nb. Max installation is **not** required to use the devices in `crow_m4l`.
 
 After downloading the entire `crow-max-and-m4l` repo, extract the zip file and you should get two unique folders: `crow_max` and `crow_m4l`.
@@ -47,6 +48,8 @@ If you are updating a previous installation, just replace the previous `crow_m4l
 The `crow_m4l` folder holds a suite of devices to help integrate your modular with Live:
 
 <img src="https://github.com/monome/crow-max-and-m4l/blob/master/images/m4l_row.png" width="800">
+
+There is also a series of [video walkthroughs](https://youtu.be/TaEGzWsFVQc) available, which explore setup and basic parameters of each device.
 
 ---
 

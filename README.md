@@ -1,8 +1,8 @@
-# crow-max
+# crow-max-and-m4l
 Max + M4L for crow (monome/whimsical raps)
 
 ## Max installation
-After downloading the entire `crow-max` repo, extract the zip file and you should get two unique folders: `crow_max` and `crow_m4l`.
+After downloading the entire `crow-max-and-m4l` repo, extract the zip file and you should get two unique folders: `crow_max` and `crow_m4l`.
 
 Open `Max` > `Options` > `File Preferences` > highlight `User Library` > the rightmost icon in the bottom bar should illuminate. Clicking this icon will open the User Library folder, where you can drop the `crow_max` folder.
 
@@ -13,7 +13,7 @@ Restart Max and you should be able to instantiate the `crow` abstraction as a re
 ### Getting started with crow + Max
 A detailed Max help patcher is included with the `crow`abstraction:
 
-<img src="https://github.com/monome/crow-max/blob/master/images/help_ss.png" width="500">
+<img src="https://github.com/monome/crow-max-and-m4l/blob/master/images/help_ss.png" width="500">
 
 To access, instantiate `crow` and right-click the object. Select "Open crow Help".
 
@@ -28,12 +28,16 @@ To access, instantiate `crow` and right-click the object. Select "Open crow Help
 ### The standalone ^^bootloader patch
 To help make flashing new crow firmware easy, we've included a straightforward Max patch that walks through the necessary steps:
 
-<img src="https://github.com/monome/crow-max/blob/master/images/bootloader_ss.png" width="300">
+<img src="https://github.com/monome/crow-max-and-m4l/blob/master/images/bootloader_ss.png" width="300">
+
+You can either open it from inside the `crow_max` folder **or** by opening a new patcher in Max and instantiating a `^^bootloader` object (lock the patch and double-click the object to open the bootloader helper).
+
+After loading new firmware, you will need to re-establish the connection between Max and the crow module but there is no need to reboot your modular.
 
 ## Max for Live installation
 nb. Max installation is **not** required to use the devices in `crow_m4l`.
 
-After downloading the entire `crow-max` repo, extract the zip file and you should get two unique folders: `crow_max` and `crow_m4l`.
+After downloading the entire `crow-max-and-m4l` repo, extract the zip file and you should get two unique folders: `crow_max` and `crow_m4l`.
 
 Open Live (9 or 10) Suite, running at least Max 7.3.6. Place `crow_m4l` wherever you'd prefer it living longterm on your hard drive. Open Live and drag the folder into Live's browser, under `PLACES`.
 
@@ -42,12 +46,12 @@ If you are updating a previous installation, just replace the previous `crow_m4l
 ### Getting started with crow + Max for Live
 The `crow_m4l` folder holds a suite of devices to help integrate your modular with Live:
 
-<img src="https://github.com/monome/crow-max/blob/master/images/m4l_row.png" width="800">
+<img src="https://github.com/monome/crow-max-and-m4l/blob/master/images/m4l_row.png" width="800">
 
 ---
 
 ### **^^command_center**
-<img src="https://github.com/monome/crow-max/blob/master/images/m4l_command-center.png" width="150">
+<img src="https://github.com/monome/crow-max-and-m4l/blob/master/images/m4l_command-center.png" width="150">
 
 nb. the m4l devices that follow will not connect to crow unless `^^command_center` is properly initialized
 
@@ -60,7 +64,7 @@ nb. the m4l devices that follow will not connect to crow unless `^^command_cente
 
 #### **^^dual**
 
-<img src="https://github.com/monome/crow-max/blob/master/images/m4l_dual.png" width="150">
+<img src="https://github.com/monome/crow-max-and-m4l/blob/master/images/m4l_dual.png" width="150">
 
 - an *output* device to translate MIDI data from Live to v/8 and envelope voltages
 - load onto any MIDI track + either arm it for record or set the monitoring to "in"
@@ -79,7 +83,7 @@ nb. the m4l devices that follow will not connect to crow unless `^^command_cente
 
 #### ^^ins
 
-<img src="https://github.com/monome/crow-max/blob/master/images/m4l_ins.png" width="400">
+<img src="https://github.com/monome/crow-max-and-m4l/blob/master/images/m4l_ins.png" width="400">
 
 - an *input* device to translate incoming CV to useful MIDI data
 - load onto any MIDI track
@@ -105,7 +109,7 @@ nb. the m4l devices that follow will not connect to crow unless `^^command_cente
 
 #### ^^jf_synth
 
-<img src="https://github.com/monome/crow-max/blob/master/images/m4l_jf-synth.png" width="150">
+<img src="https://github.com/monome/crow-max-and-m4l/blob/master/images/m4l_jf-synth.png" width="150">
 
 - an *i2c output* device to play a connected Just Friends module as a 6-voice polyphonic synth through Live
 - requires Just Friends (Whimsical Raps) to be connected via i2c cable
@@ -117,7 +121,7 @@ nb. the m4l devices that follow will not connect to crow unless `^^command_cente
 ---
 #### ^^outs
 
-<img src="https://github.com/monome/crow-max/blob/master/images/m4l_outs-setup.png" width="200">
+<img src="https://github.com/monome/crow-max-and-m4l/blob/master/images/m4l_outs-setup.png" width="200">
 
 nb. you can instantiate this device up to four times in a Live set, to speak to each of the four hardware outputs on crow
 
@@ -130,7 +134,7 @@ nb. you can instantiate this device up to four times in a Live set, to speak to 
 
 *v/8*
 
-<img src="https://github.com/monome/crow-max/blob/master/images/m4l_outs-v-8.png" width="200">
+<img src="https://github.com/monome/crow-max-and-m4l/blob/master/images/m4l_outs-v-8.png" width="200">
 
 - *base*: the central point for MIDI-to-CV conversion, default is MIDI note 60
 - *slew*: adds glide between notes, default is none
@@ -139,7 +143,7 @@ nb. you can instantiate this device up to four times in a Live set, to speak to 
 
 *clock*
 
-<img src="https://github.com/monome/crow-max/blob/master/images/m4l_outs-clock.png" width="200">
+<img src="https://github.com/monome/crow-max-and-m4l/blob/master/images/m4l_outs-clock.png" width="200">
 
 - *rate*: the rate of clock pulses, synced to Live's transport + tempo, default quarter notes
 - *trigger*: set the max voltage for the trigger signal, default 5V
@@ -150,7 +154,7 @@ nb. you can instantiate this device up to four times in a Live set, to speak to 
 
 *lfo*
 
-<img src="https://github.com/monome/crow-max/blob/master/images/m4l_outs-lfo.png" width="200">
+<img src="https://github.com/monome/crow-max-and-m4l/blob/master/images/m4l_outs-lfo.png" width="200">
 
 - *rate*: the rate of a positive LFO, synced to Live's transport + tempo, default 1 bar
 - *level*: the high voltage for the LFO to reach before falling to 0V, default 5V
@@ -159,7 +163,7 @@ nb. you can instantiate this device up to four times in a Live set, to speak to 
 
 *remote*
 
-<img src="https://github.com/monome/crow-max/blob/master/images/m4l_outs-remote.png" width="200">
+<img src="https://github.com/monome/crow-max-and-m4l/blob/master/images/m4l_outs-remote.png" width="200">
 
 - *knob*: an automatable knob which sends any movement out as CV
 - *min*: the minimum CV the knob can put out when the needle is far-left, default -5V

@@ -39,6 +39,18 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-8",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 5,
+					"outlettype" : [ "", "", "", "", "" ],
+					"patching_rect" : [ 36.5, 355.0, 108.0, 22.0 ],
+					"text" : "regexp COM"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"bgcolor" : [ 0.301961, 0.301961, 0.301961, 1.0 ],
 					"bgcolor2" : [ 0.301961, 0.301961, 0.301961, 1.0 ],
 					"bgfillcolor_angle" : 270.0,
@@ -107,7 +119,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 5,
 					"outlettype" : [ "", "", "", "", "" ],
-					"patching_rect" : [ 36.5, 319.0, 108.0, 22.0 ],
+					"patching_rect" : [ 36.5, 329.0, 108.0, 22.0 ],
 					"text" : "regexp usbmodem"
 				}
 
@@ -172,7 +184,7 @@
 					"bgfillcolor_proportion" : 0.5,
 					"bgfillcolor_type" : "color",
 					"id" : "obj-2",
-					"items" : "Bluetooth-Incoming-Port",
+					"items" : [ "Bluetooth-Incoming-Port", ",", "usbmodem3072357931371" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -1019,7 +1031,7 @@
 				"box" : 				{
 					"id" : "obj-1",
 					"maxclass" : "newobj",
-					"numinlets" : 2,
+					"numinlets" : 3,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ 275.0, 217.5, 233.0, 22.0 ],
@@ -1085,6 +1097,15 @@
 				"patchline" : 				{
 					"destination" : [ "obj-10", 0 ],
 					"midpoints" : [ 90.5, 324.0, 46.0, 324.0 ],
+					"order" : 2,
+					"source" : [ "obj-2", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-8", 0 ],
+					"midpoints" : [ 90.5, 282.25, 46.0, 282.25 ],
 					"order" : 1,
 					"source" : [ "obj-2", 1 ]
 				}
@@ -1129,6 +1150,14 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-12", 0 ],
+					"midpoints" : [ 90.5, 387.0, 225.5, 387.0, 225.5, 242.0, 360.5, 242.0 ],
+					"source" : [ "obj-8", 2 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-1", 0 ],
 					"source" : [ "obj-9", 1 ]
 				}
@@ -1145,7 +1174,7 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "crowmax.lua",
-				"bootpath" : "~/Downloads/crow-max-master-2/crow_max",
+				"bootpath" : "~/Documents/GitHub/crow-max/crow_max",
 				"patcherrelativepath" : ".",
 				"type" : "Jlua",
 				"implicit" : 1

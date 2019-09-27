@@ -56,7 +56,9 @@ There is also a series of [video walkthroughs](https://youtu.be/TaEGzWsFVQc) ava
 ### **^^command_center**
 <img src="https://github.com/monome/crow-max-and-m4l/blob/master/images/m4l_command-center.png" width="150">
 
-nb. the m4l devices that follow will not connect to crow unless `^^command_center` is properly initialized
+nb. the m4l devices that follow will not connect to crow unless `^^command_center` is properly initialized.
+
+nb. (pt 2) currently only one crow is addressable at a time. Multi-crow support will be added in the future.
 
 - a *connector* between crow and Live
 - load onto any MIDI track

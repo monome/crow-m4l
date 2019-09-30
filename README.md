@@ -116,12 +116,23 @@ nb. (pt 2) currently only one crow is addressable at a time. Multi-crow support 
 
 <img src="https://github.com/monome/crow-max-and-m4l/blob/master/images/m4l_jf-synth.png" width="150">
 
-- an *i2c output* device to play a connected Just Friends module as a 6-voice polyphonic synth through Live
-- requires Just Friends (Whimsical Raps) to be connected via i2c cable
+an i2c output device to play a connected Just Friends module as a 6-voice polyphonic synth through Live
+
+- as always, you must first choose a crow device with the ^^command_center
+
+- ^^jf_synth requires Just Friends (Whimsical Raps) to be connected to crow via i2c cable or through powered-bus
+
 - load onto any MIDI track + either arm it for record or set the monitoring to "in"
-- on your Just Friends module's panel, engage `sound` and `transient`
-- on the m4l device, engage the toggle in the middle to connect to Just Friends
-- you should now be able to play Just Friends through MIDI
+
+- if crow is NOT connected to an i2c powered-bus (ie, if it's just connected to Just Friends via an i2c cable), toggle 'enable pullups' on the m4l interface
+
+- on your Just Friends module's panel, engage 'sound' and 'transient'
+
+- on the m4l device, engage the big toggle in the middle-bottom to connect to Just Friends
+
+- you will see the 6 lights blink on Just Friends
+
+- you should now be able to play Just Friends through MIDI!
 
 ---
 #### ^^outs

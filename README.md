@@ -124,7 +124,7 @@ an i2c output device to play a connected Just Friends module as a 6-voice polyph
 
 - load onto any MIDI track + either arm it for record or set the monitoring to "in"
 
-- if crow is NOT connected to an i2c powered-bus (ie, if it's just connected to Just Friends via an i2c cable), toggle 'enable pullups' on the m4l interface
+- if crow is NOT connected to an i2c powered-bus (ie, if it's just connected directly to Just Friends via an i2c cable with no Teletpe/TXb/powered-bus in between), toggle 'enable pullups' on the m4l interface
 
 - on your Just Friends module's panel, engage 'sound' and 'transient'
 

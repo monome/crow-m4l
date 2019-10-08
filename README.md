@@ -119,12 +119,19 @@ nb. (pt 2) currently only one crow is addressable at a time. Multi-crow support 
 an i2c output device to play a connected Just Friends module as a 6-voice polyphonic synth through Live
 
 - as always, you must first choose a crow device with the ^^command_center
+
 - ^^jf_synth requires Just Friends (Whimsical Raps) to be connected to crow via i2c cable or through powered-bus
+
 - load onto any MIDI track + either arm it for record or set the monitoring to "in"
+
 - if crow is NOT connected to an i2c powered-bus (ie, if it's just connected directly to Just Friends via an i2c cable with no Teletpe/TXb/powered-bus in between), toggle 'enable pullups' on the m4l interface
+
 - on your Just Friends module's panel, engage 'sound' and 'transient'
+
 - on the m4l device, engage the big toggle in the middle-bottom to connect to Just Friends
+
 - you will see the 6 lights blink on Just Friends
+
 - you should now be able to play Just Friends through MIDI!
 
 ---
@@ -189,6 +196,7 @@ This device gives you access to crow's Lua [read-eval-print loop](https://en.wik
 <img src="https://github.com/monome/crow-max-and-m4l/blob/master/images/m4l_derwydd.png" width="450">
 
 - as always, you must first choose a crow device with the ^^command_center
+
 - load onto any MIDI track.
 - use the yellow-bordered box to type in lua code to send to crow.  
 - choose between how the 'enter' key on your keyboard functions using the switch
@@ -207,6 +215,7 @@ This device gives you access to crow's Lua [read-eval-print loop](https://en.wik
 Use this device to translate multiple mappable knobs in ableton into data for crow; the primary use case is taking remote control over variables in a script that crow is currently running.
 
 - as always, you must first choose a crow device with the ^^command_center
+
 - load onto any MIDI track
 - use the yellow-bordered box to type in a name matching a variable in your script; the corresponding knob will now act as a remote control for that variable
 - press enter to confirm your selection.

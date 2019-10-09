@@ -54,7 +54,7 @@ There is also a series of [video walkthroughs](https://youtu.be/TaEGzWsFVQc) ava
 ---
 
 ### **^^command_center**
-![^^command-center](/images/command-center.png)
+![^^command-center](/images/m4l_command-center.png)
 
 nb. the m4l devices that follow will not connect to crow unless `^^command_center` is properly initialized.
 
@@ -69,7 +69,7 @@ nb. (pt 2) currently only one crow is addressable at a time. Multi-crow support 
 
 #### **^^dual**
 
-![^^dual](/images/dual.png)
+![^^dual](/images/m4l_dual.png)
 
 - an *output* device to translate MIDI data from Live to v/8 and envelope voltages
 - load onto any MIDI track + either arm it for record or set the monitoring to "in"
@@ -88,7 +88,7 @@ nb. (pt 2) currently only one crow is addressable at a time. Multi-crow support 
 
 #### ^^ins
 
-![^^ins](/images/ins.png)
+![^^ins](/images/m4l_ins.png)
 
 - an *input* device to translate incoming CV to useful MIDI data
 - load onto any MIDI track

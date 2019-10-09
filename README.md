@@ -54,7 +54,7 @@ There is also a series of [video walkthroughs](https://youtu.be/TaEGzWsFVQc) ava
 ---
 
 ### **^^command_center**
-![^^command-center](/images/m4l_command-center.png)
+![command-center](/images/m4l_command-center.png)
 
 nb. the m4l devices that follow will not connect to crow unless `^^command_center` is properly initialized.
 
@@ -69,7 +69,7 @@ nb. (pt 2) currently only one crow is addressable at a time. Multi-crow support 
 
 #### **^^dual**
 
-![^^dual](/images/m4l_dual.png)
+![dual](/images/m4l_dual.png)
 
 - an *output* device to translate MIDI data from Live to v/8 and envelope voltages
 - load onto any MIDI track + either arm it for record or set the monitoring to "in"
@@ -88,7 +88,7 @@ nb. (pt 2) currently only one crow is addressable at a time. Multi-crow support 
 
 #### ^^ins
 
-![^^ins](/images/m4l_ins.png)
+![ins](/images/m4l_ins.png)
 
 - an *input* device to translate incoming CV to useful MIDI data
 - load onto any MIDI track
@@ -114,7 +114,7 @@ nb. (pt 2) currently only one crow is addressable at a time. Multi-crow support 
 
 #### ^^jf_synth
 
-![^^jf-synth](/images/m4l_jf-synth.png)
+![jf-synth](/images/m4l_jf-synth.png)
 
 an i2c output device to play a connected Just Friends module as a 6-voice polyphonic synth through Live
 
@@ -137,7 +137,7 @@ an i2c output device to play a connected Just Friends module as a 6-voice polyph
 ---
 #### ^^outs
 
-![^^outs-setup](/images/m4l_outs-setup.png)
+![outs-setup](/images/m4l_outs-setup.png)
 
 nb. you can instantiate this device up to four times in a Live set, to speak to each of the four hardware outputs on crow
 
@@ -193,7 +193,7 @@ nb. you can instantiate this device up to four times in a Live set, to speak to 
 
 This device gives you access to crow's Lua [read-eval-print loop](https://en.wikipedia.org/wiki/Read–eval–print_loop).  Send Lua code to Crow to execute on the fly, allowing you to modify crow's behavior in your real time.  You can also use it to upload new scripts, erase scripts, and more.
 
-![^^derwydd](/images/m4l_derwydd.png)
+![derwydd](/images/m4l_derwydd.png)
 
 - as always, you must first choose a crow device with the ^^command_center
 
@@ -210,7 +210,7 @@ This device gives you access to crow's Lua [read-eval-print loop](https://en.wik
 
 #### ^^bridges
 
-![^^bridges](/images/m4l_bridges.png)
+![bridges](/images/m4l_bridges.png)
 
 Use this device to translate multiple mappable knobs in ableton into data for crow; the primary use case is taking remote control over variables in a script that crow is currently running.
 
@@ -230,7 +230,7 @@ Use this device to translate multiple mappable knobs in ableton into data for cr
 
 #### ^^macros
 
-![^^macros](/images/m4l_macros.png)
+![macros](/images/m4l_macros.png)
 
 Store code snippets which can be sent to crow as macros on the fly.  Each snippet can be sent by selecting the device and pressing the corresponding number key on your keypad, or by sending the device the corresponding MIDI note.
 

@@ -239,3 +239,6 @@ Store code snippets which can be sent to crow as macros on the fly.  Each snippe
 - use the numbered, yellow-bordered boxes to type in lua code to send to crow
 - to execute the code in each box, you may either send the corresponding MIDI note to the device, or press the corresponding key on your keyboard *nb: when using your number keys, make sure the device is highlighted*
 - macros are saved with your live set
+
+
+

@@ -186,3 +186,56 @@ nb. you can instantiate this device up to four times in a Live set, to speak to 
 - *max* the maximum CV the knob can put out when the needle is far-right, default 5V
 - *bias*: adds an offset to the knob's current position, default 0V
 - *smooth*: adds glide between knob values, default 50ms
+
+---
+
+#### ^^derwydd
+
+This device gives you access to crow's Lua [read-eval-print loop](https://en.wikipedia.org/wiki/Read–eval–print_loop).  Send Lua code to Crow to execute on the fly, allowing you to modify crow's behavior in your real time.  You can also use it to upload new scripts, erase scripts, and more.
+
+<img src="https://github.com/monome/crow-max-and-m4l/blob/master/images/m4l_derwydd.png" width="450">
+
+- as always, you must first choose a crow device with the ^^command_center
+
+- load onto any MIDI track.
+- use the yellow-bordered box to type in lua code to send to crow.
+- choose between how the 'enter' key on your keyboard functions using the switch
+  - *execute* mode: pressing enter will send the entered code to crow for execution
+  - *carriage-return* mode: pressing enter will move you to a new line, allowing you to send more complex multi-line code snippets to crow
+- printouts and error messages from crow are displayed to the right of the text entry box
+- use the up and down arrow keys to scroll through your recently entered code snippets
+- use the ^^ buttons to give crow special commands; hover over the buttons and read Ableton's info box to find out more
+
+---
+
+#### ^^bridges
+
+<img src="https://github.com/monome/crow-max-and-m4l/blob/master/images/m4l_bridges.png" width="300">
+
+Use this device to translate multiple mappable knobs in ableton into data for crow; the primary use case is taking remote control over variables in a script that crow is currently running.
+
+- as always, you must first choose a crow device with the ^^command_center
+
+- load onto any MIDI track
+- use the yellow-bordered box to type in a name matching a variable in your script; the corresponding knob will now act as a remote control for that variable
+- press enter to confirm your selection.
+- adjust the min and max values of the knob as desired
+- try automating the knob
+- try MIDI mapping the knob with a MIDI controller
+- try mapping the knob with another Max For Live Device
+- adjust the number of bridges using the *bridge count* controller
+- you may have an arbitrary number ^^bridges devices instantiated in a given set
+
+---
+
+#### ^^macros
+
+<img src="https://github.com/monome/crow-max-and-m4l/blob/master/images/m4l_macros.png" width="300">
+
+Store code snippets which can be sent to crow as macros on the fly.  Each snippet can be sent by selecting the device and pressing the corresponding number key on your keypad, or by sending the device the corresponding MIDI note.
+
+- as always you must first choose a crow device the ^^command_center
+- load onto any MIDI track
+- use the numbered, yellow-bordered boxes to type in lua code to send to crow
+- to execute the code in each box, you may either send the corresponding MIDI note to the device, or press the corresponding key on your keyboard *nb: when using your number keys, make sure the device is highlighted*
+- macros are saved with your live set

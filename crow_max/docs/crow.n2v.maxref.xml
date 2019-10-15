@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml-stylesheet href="./c74ref.xsl" type="text/xsl"?>
+
+<c74object name="crow.n2v" module="crow">
+
+	<digest>
+		Convert MIDI note integers to V/Oct voltage floats.
+	</digest>
+
+	<description>
+		Specify a root MIDI note which corresponds to 0V, then input a MIDI note integer and generate an output float which corresponds to a volt-per-octave voltage above the base of 0V.  Feed the output to <o>crow.volts</o> to convert pitch data in Max to V/oct CV for your modular synthesizer.
+	</description>
+
+	<!--METADATA-->
+	<metadatalist>
+		<metadata name="author">Sam Wolk</metadata>
+		<metadata name="tag">crow</metadata>
+		<metadata name="tag">crow help</metadata>
+		<metadata name="tag">Eurorack</metadata>
+	</metadatalist>
+
+	<!--ARGUMENTS-->
+	<objarglist>
+		<objarg name="Root" optional="0" type="int">
+            <digest>
+				MIDI note # for 0V reference
+			</digest>
+			<description>
+				Specifies which MIDI note number will result in 0.0V output.  All other values will be determined based off that reference.  
+			</description>
+        </objarg>
+	</objarglist>
+
+	<!--MESSAGES-->
+	<methodlist>
+	</methodlist>
+
+	<!--DISCUSSION-->
+	<discussion>
+	</discussion>
+
+	<!--SEEALSO-->
+	<seealsolist>
+		<seealso name="crow"/>
+		<seealso name="crow.lfo"/>
+		<seealso name="crow.pulse"/>
+		<seealso name="crow.volts"/>	
+	</seealsolist>
+
+	
+
+</c74object>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml-stylesheet href="./c74ref.xsl" type="text/xsl"?>
+
+<c74object name="crow.volts" module="crow">
+
+	<digest>
+		Set CV output values on crow
+	</digest>
+
+	<description>
+		Connect to the <o>crow</o> object to automatically generate CV values on the crow eurorack module.
+	</description>
+
+	<!--METADATA-->
+	<metadatalist>
+		<metadata name="author">Sam Wolk</metadata>
+		<metadata name="tag">crow</metadata>
+		<metadata name="tag">crow help</metadata>
+		<metadata name="tag">Eurorack</metadata>
+	</metadatalist>
+
+	<!--ARGUMENTS-->
+	<objarglist>
+		<objarg name="OutputIndex" optional="0" type="int">
+            <digest>
+				Hardware output to set to voltage
+			</digest>
+        </objarg>
+		<objarg name="Voltage" optional="1" type="float">
+            <digest>
+				Destination voltage
+			</digest>
+        </objarg>
+		<objarg name="Slew" optional="1" type="float">
+            <digest>
+				Time in seconds
+			</digest>
+        </objarg>
+	</objarglist>
+
+	<!--MESSAGES-->
+	<methodlist>
+		<method name="list">
+			<arglist>
+				<arg name="input" optional="0" type="list" />
+			</arglist>
+			<digest>
+				Set target value and time
+			</digest>
+			<description>
+				The first number specifies a target value, and the second number specifies a total amount of time (in seconds); crow slews the selected output to the target in the specified amount of time.
+			</description>
+		</method>
+		<method name="bang">
+             <digest>
+				Slew the specified output to the target.
+			</digest>
+			<description>
+				In left inlet: Slew the specified output to the target.
+			</description>
+        </method>
+	</methodlist>
+
+	<!--DISCUSSION-->
+	<discussion>
+	</discussion>
+
+	<!--SEEALSO-->
+	<seealsolist>
+		<seealso name="crow"/>
+		<seealso name="crow.lfo"/>
+		<seealso name="crow.pulse"/>
+		<seealso name="crow.n2v"/>	
+	</seealsolist>
+
+	
+
+</c74object>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml-stylesheet href="./c74ref.xsl" type="text/xsl"?>
+
+<c74object name="crow.lfo" module="crow">
+
+	<digest>
+		Generate CV LFOs on crow
+	</digest>
+
+	<description>
+		Connect to the <o>crow</o> object to automatically generate CV LFOs on the crow eurorack module.
+	</description>
+
+	<!--METADATA-->
+	<metadatalist>
+		<metadata name="author">Sam Wolk</metadata>
+		<metadata name="tag">crow</metadata>
+		<metadata name="tag">crow help</metadata>
+		<metadata name="tag">Eurorack</metadata>
+	</metadatalist>
+
+	<!--ARGUMENTS-->
+	<objarglist>
+		<objarg name="Output Index" optional="0" type="int">
+            <digest>
+				Hardware output to turn into LFO (default is 1)
+			</digest>
+			<description>
+				This value cannot be changed at runtime.  Use one object per output if you want multiple LFOs.
+			</description>
+        </objarg>
+		<objarg name="Period" optional="1" type="float">
+            <digest>
+				LFO period in seconds
+			</digest>
+        </objarg>
+		<objarg name="Amplitude" optional="1" type="float">
+            <digest>
+				LFO amplitude in volts.
+			</digest>
+			<description>
+				LFO amplitude in volts.  Negative values invert the LFO.
+			</description>
+        </objarg>
+		<objarg name="Skew" optional="1" type="float">
+            <digest>
+				Expects 0.0-1.0; skews the LFO waveshape.
+			</digest>
+			<description>
+				0 corresponds to Saw, 0.5 to tri, and 1.0 to Ramp
+			</description>
+        </objarg>
+	</objarglist>
+
+	<!--MESSAGES-->
+	<methodlist>
+		 <method name="period">
+            <arglist>
+                <arg name="period" optional="0" type="float" />
+            </arglist>
+            <digest>
+                measured in seconds
+            </digest>
+			<description>
+				The word <m>period</m> followed by a float number sets the period of the LFO in seconds. 
+			</description>
+        </method>
+		<method name="amplitude">
+            <arglist>
+                <arg name="amplitude" optional="0" type="float" />
+            </arglist>
+             <digest>
+				measured in volts
+			</digest>
+			<description>
+				The word <m>amplitude</m> followed by a float number sets the amplitude of the LFO in volts. 
+			</description>
+        </method>
+		<method name="skew">
+            <arglist>
+                <arg name="skew" optional="0" type="float" />
+            </arglist>
+            <digest>
+				skews the LFO waveshape (0.0 to 1.0)
+			</digest>
+			<description>
+				The word <m>skew</m> followed by a float from 0.0 to 1.0 sets the skew of the LFO as a fraction of the period. 0 corresponds to saw, 0.5 to tri, and 1.0 to Ramp.
+			</description>
+        </method>
+	</methodlist>
+
+	<!--DISCUSSION-->
+	<discussion>
+	</discussion>
+
+	<!--SEEALSO-->
+	<seealsolist>
+		<seealso name="crow"/>
+		<seealso name="crow.volts"/>
+		<seealso name="crow.pulse"/>
+		<seealso name="crow.n2v"/>	
+	</seealsolist>
+
+	
+
+</c74object>

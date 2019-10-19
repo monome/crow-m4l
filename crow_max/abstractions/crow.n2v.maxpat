@@ -39,7 +39,7 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"comment" : "base midi note",
+					"comment" : "root note (semitones)",
 					"cool" : 1,
 					"id" : "obj-30",
 					"index" : 0,
@@ -53,7 +53,7 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "",
+					"comment" : "v/oct voltage (float)",
 					"id" : "obj-29",
 					"index" : 0,
 					"maxclass" : "outlet",
@@ -69,15 +69,15 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
-					"outlettype" : [ "int" ],
+					"outlettype" : [ "float" ],
 					"patching_rect" : [ 121.0, 79.0, 19.0, 22.0 ],
-					"text" : "t i"
+					"text" : "t f"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"comment" : "midi note",
+					"comment" : "note to convert (semitones)",
 					"id" : "obj-27",
 					"index" : 0,
 					"maxclass" : "inlet",

@@ -4,11 +4,11 @@
 <c74object name="crow.n2v" module="crow">
 
 	<digest>
-		Convert MIDI note integers to V/Oct voltage floats.
+		Convert semitones/MIDI notes to voltage.
 	</digest>
 
 	<description>
-		Specify a root MIDI note which corresponds to 0V, then input a MIDI note integer and generate an output float which corresponds to a volt-per-octave voltage above the base of 0V.  Feed the output to <o>crow.volts</o> to convert pitch data in Max to V/oct CV for your modular synthesizer.
+		Specify a root note which corresponds to 0V, then input a note in semitones and generate an output float which corresponds to a volt-per-octave voltage above the base of 0V.  Feed the output to <o>crow.volts</o> to convert pitch data in Max to V/oct CV for your modular synthesizer.
 	</description>
 
 	<!--METADATA-->
@@ -21,7 +21,7 @@
 
 	<!--ARGUMENTS-->
 	<objarglist>
-		<objarg name="Root" optional="0" type="int">
+		<objarg name="root" optional="0" type="int">
             <digest>
 				MIDI note # for 0V reference
 			</digest>
@@ -33,6 +33,28 @@
 
 	<!--MESSAGES-->
 	<methodlist>
+		<method name="int">
+			<arglist>
+				<arg name="input" optional="0" type="int" />
+			</arglist>
+			<digest>
+				convert semitones to a V/Oct voltage
+			</digest>
+			<description>
+				Convert a number in semitones to a voltage using the V/Oct tuning standard.  The root number specified as <o>crow.n2v</o>'s first argument will be subtracted from the incoming note first.
+			</description>
+		</method>
+		<method name="float">
+			<arglist>
+				<arg name="input" optional="0" type="float" />
+			</arglist>
+			<digest>
+				convert semitones and cents to a V/Oct voltage
+			</digest>
+			<description>
+				Convert a microtonal number in semitones and cents to a voltage using the V/Oct tuning standard. The root number specified as <o>crow.n2v</o>'s first argument will be subtracted from the incoming note first.
+			</description>
+		</method>
 	</methodlist>
 
 	<!--DISCUSSION-->
@@ -42,9 +64,14 @@
 	<!--SEEALSO-->
 	<seealsolist>
 		<seealso name="crow"/>
-		<seealso name="crow.lfo"/>
+		<seealso name="crow.volts"/>
+		<seealso name="crow.var"/>	
+		<seealso name="crow.function"/>
+		<seealso name="crow.adsr"/>
+		<seealso name="crow.ar"/>
 		<seealso name="crow.pulse"/>
-		<seealso name="crow.volts"/>	
+		
+		
 	</seealsolist>
 
 	

@@ -8,7 +8,7 @@
 	</digest>
 
 	<description>
-		Connect to the <o>crow</o> object to automatically generate CV values on the crow eurorack module.
+		Connect <o>crow.volts</o> to the <o>crow</o> Max object to control the CV outputs on the crow eurorack module.
 	</description>
 
 	<!--METADATA-->
@@ -21,17 +21,12 @@
 
 	<!--ARGUMENTS-->
 	<objarglist>
-		<objarg name="OutputIndex" optional="0" type="int">
+		<objarg name="output" optional="0" type="int">
             <digest>
-				Hardware output to set to voltage
+				Hardware output index (1-4)
 			</digest>
         </objarg>
-		<objarg name="Voltage" optional="1" type="float">
-            <digest>
-				Destination voltage
-			</digest>
-        </objarg>
-		<objarg name="Slew" optional="1" type="float">
+		<objarg name="slew" optional="1" type="float">
             <digest>
 				Time in seconds
 			</digest>
@@ -40,15 +35,39 @@
 
 	<!--MESSAGES-->
 	<methodlist>
+		<method name="float">
+			<arglist>
+				<arg name="input" optional="0" type="float" />
+			</arglist>
+			<digest>
+				Set voltage
+			</digest>
+			<description>
+				Set <o>crow.volts</o> specified hardware output to a new voltage (the last slew time will be used).
+			</description>
+		</method>
 		<method name="list">
 			<arglist>
 				<arg name="input" optional="0" type="list" />
 			</arglist>
 			<digest>
-				Set target value and time
+				Set voltage and slew time
 			</digest>
 			<description>
-				The first number specifies a target value, and the second number specifies a total amount of time (in seconds); crow slews the selected output to the target in the specified amount of time.
+				The first number specifies a target value (in volts), and the second number specifies a total amount of time (in seconds); <o>crow</o> slews the selected output to the target voltage in the specified amount of time.
+			</description>
+		</method>
+		<method name="channel">
+			<arglist>
+				<arg name="index" optional="0" type="int" />
+				<arg name="voltage" optional="1" type="float" />
+				<arg name="slew" optional="1" type="float" />
+			</arglist>
+			<digest>
+				Set hardware output, target voltage, and slew time
+			</digest>
+			<description>
+				The word <m>channel</m>, followed by an output index (1-4), a voltage (in volts, float, optional), and a slew  time (in seconds, float) (optional), sets the selected output to the target voltage in the specified amount of time.
 			</description>
 		</method>
 		<method name="bang">
@@ -56,7 +75,7 @@
 				Slew the specified output to the target.
 			</digest>
 			<description>
-				In left inlet: Slew the specified output to the target.
+				A bang sent to the left inlet will slew the specified output to the target in the current slew time.
 			</description>
         </method>
 	</methodlist>
@@ -68,7 +87,10 @@
 	<!--SEEALSO-->
 	<seealsolist>
 		<seealso name="crow"/>
-		<seealso name="crow.lfo"/>
+		<seealso name="crow.var"/>
+		<seealso name="crow.function"/>
+		<seealso name="crow.adsr"/>
+		<seealso name="crow.ar"/>
 		<seealso name="crow.pulse"/>
 		<seealso name="crow.n2v"/>	
 	</seealsolist>

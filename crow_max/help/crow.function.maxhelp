@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 100.0, 100.0, 1229.0, 489.0 ],
+		"rect" : [ 100.0, 100.0, 1043.0, 489.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -56,7 +56,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 100.0, 126.0, 1229.0, 463.0 ],
+						"rect" : [ 0.0, 26.0, 1043.0, 463.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -164,6 +164,7 @@
 									"maxclass" : "kslider",
 									"numinlets" : 2,
 									"numoutlets" : 2,
+									"offset" : 0,
 									"outlettype" : [ "int", "int" ],
 									"parameter_enable" : 0,
 									"patching_rect" : [ 795.0, 73.0, 168.0, 53.0 ],
@@ -1195,7 +1196,7 @@
 						"bgcolor" : [ 0.996078431372549, 0.996078431372549, 0.996078431372549, 1.0 ]
 					}
 ,
-					"patching_rect" : [ 1105.5, 318.0, 109.0, 22.0 ],
+					"patching_rect" : [ 879.0, 230.0, 109.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -1238,7 +1239,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 0.0, 26.0, 1229.0, 463.0 ],
+						"rect" : [ 0.0, 26.0, 1043.0, 463.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -2131,7 +2132,7 @@
 						"bgcolor" : [ 0.996078431372549, 0.996078431372549, 0.996078431372549, 1.0 ]
 					}
 ,
-					"patching_rect" : [ 1066.5, 291.0, 102.0, 22.0 ],
+					"patching_rect" : [ 840.0, 203.0, 102.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -2162,7 +2163,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 0.0, 26.0, 1229.0, 463.0 ],
+						"rect" : [ 0.0, 26.0, 1043.0, 463.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -2194,7 +2195,7 @@
 						"lines" : [  ]
 					}
 ,
-					"patching_rect" : [ 1170.0, 355.0, 25.0, 22.0 ],
+					"patching_rect" : [ 943.5, 267.0, 25.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -2238,8 +2239,8 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 994.0, 249.0, 211.0, 22.0 ],
-					"text" : "print messages_from_crow @popup 1"
+					"patching_rect" : [ 797.0, 153.5, 153.0, 22.0 ],
+					"text" : "print messages_from_crow"
 				}
 
 			}
@@ -2444,7 +2445,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 823.0, 214.5, 139.0, 22.0 ],
+					"patching_rect" : [ 626.0, 122.0, 139.0, 22.0 ],
 					"text" : "s commands_from_crow"
 				}
 
@@ -2455,7 +2456,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 994.0, 214.5, 135.0, 22.0 ],
+					"patching_rect" : [ 797.0, 122.0, 135.0, 22.0 ],
 					"text" : "s messages_from_crow"
 				}
 
@@ -2467,7 +2468,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 839.5, 87.0, 320.0, 47.0 ],
+					"patching_rect" : [ 642.5, 40.5, 320.0, 47.0 ],
 					"text" : "NB: If you are connected to another [crow] object already, please add the [send]s and [receive]s shown here to that patch instead of connecting to this [crow]"
 				}
 
@@ -2482,7 +2483,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"parameter_enable" : 1,
-					"patching_rect" : [ 953.0, 54.5, 60.0, 20.0 ],
+					"patching_rect" : [ 756.0, 8.0, 60.0, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 660.0, 56.0, 44.0, 15.0 ],
 					"saved_attribute_attributes" : 					{
@@ -2509,7 +2510,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "open" ],
-					"patching_rect" : [ 1076.0, 139.5, 42.0, 22.0 ],
+					"patching_rect" : [ 879.0, 93.0, 42.0, 22.0 ],
 					"text" : "t open"
 				}
 
@@ -2522,7 +2523,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1076.0, 168.5, 51.0, 22.0 ],
+					"patching_rect" : [ 879.0, 122.0, 51.0, 22.0 ],
 					"text" : "pcontrol"
 				}
 
@@ -2534,7 +2535,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 823.0, 53.5, 123.0, 22.0 ],
+					"patching_rect" : [ 626.0, 7.0, 123.0, 22.0 ],
 					"text" : "r commands_to_crow"
 				}
 
@@ -2546,7 +2547,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "", "bang", "" ],
-					"patching_rect" : [ 823.0, 141.5, 190.0, 22.0 ],
+					"patching_rect" : [ 626.0, 95.0, 190.0, 22.0 ],
 					"text" : "crow"
 				}
 
@@ -2614,7 +2615,7 @@
 				"patchline" : 				{
 					"destination" : [ "obj-23", 0 ],
 					"hidden" : 1,
-					"midpoints" : [ 1085.5, 190.5, 809.0, 190.5, 809.0, 133.5, 832.5, 133.5 ],
+					"midpoints" : [ 888.5, 144.0, 612.0, 144.0, 612.0, 87.0, 635.5, 87.0 ],
 					"source" : [ "obj-24", 0 ]
 				}
 
@@ -2631,7 +2632,7 @@
 				"patchline" : 				{
 					"destination" : [ "obj-25", 0 ],
 					"hidden" : 1,
-					"midpoints" : [ 962.5, 76.5, 1084.0, 76.5, 1084.0, 70.5, 1171.0, 70.5, 1171.0, 145.5, 1120.0, 145.5, 1120.0, 136.5, 1085.5, 136.5 ],
+					"midpoints" : [ 765.5, 30.0, 887.0, 30.0, 887.0, 24.0, 974.0, 24.0, 974.0, 99.0, 923.0, 99.0, 923.0, 90.0, 888.5, 90.0 ],
 					"source" : [ "obj-3", 0 ]
 				}
 
@@ -2749,8 +2750,8 @@
 			}
 , 			{
 				"name" : "crow.function.maxpat",
-				"bootpath" : "~/Dropbox/crow/m4lfork/crow-max-and-m4l/crow_max/help",
-				"patcherrelativepath" : ".",
+				"bootpath" : "~/Dropbox/crow/m4lfork/crow-max-and-m4l/crow_max/abstractions",
+				"patcherrelativepath" : "../abstractions",
 				"type" : "JSON",
 				"implicit" : 1
 			}

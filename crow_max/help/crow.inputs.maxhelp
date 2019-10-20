@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 619.0, 291.0, 938.0, 605.0 ],
+		"rect" : [ 139.0, 179.0, 985.0, 550.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -29,8 +29,8 @@
 		"toolbars_unpinned_last_save" : 15,
 		"tallnewobj" : 0,
 		"boxanimatetime" : 200,
-		"enablehscroll" : 1,
-		"enablevscroll" : 1,
+		"enablehscroll" : 0,
+		"enablevscroll" : 0,
 		"devicewidth" : 0.0,
 		"description" : "",
 		"digest" : "",
@@ -41,7 +41,72 @@
 		"boxes" : [ 			{
 				"box" : 				{
 					"hidden" : 1,
-					"id" : "obj-9",
+					"id" : "obj-18",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 787.0, 503.0, 55.0, 22.0 ],
+					"text" : "bpatcher"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-16",
+					"maxclass" : "live.text",
+					"mode" : 0,
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"parameter_enable" : 1,
+					"patching_rect" : [ 787.0, 468.0, 127.0, 28.0 ],
+					"saved_attribute_attributes" : 					{
+						"valueof" : 						{
+							"parameter_shortname" : "live.text[2]",
+							"parameter_enum" : [ "val1", "val2" ],
+							"parameter_type" : 2,
+							"parameter_longname" : "live.text[2]",
+							"parameter_mmax" : 1.0
+						}
+
+					}
+,
+					"text" : "What's a bpatcher?",
+					"varname" : "live.text[1]"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"hidden" : 1,
+					"id" : "obj-11",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 787.0, 534.0, 79.0, 22.0 ],
+					"text" : "prepend help"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"hidden" : 1,
+					"id" : "obj-10",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 810.0, 608.0, 51.0, 22.0 ],
+					"text" : "pcontrol"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"hidden" : 1,
+					"id" : "obj-45",
 					"maxclass" : "newobj",
 					"numinlets" : 0,
 					"numoutlets" : 0,
@@ -56,7 +121,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 0.0, 26.0, 938.0, 579.0 ],
+						"rect" : [ 0.0, 26.0, 985.0, 524.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -88,7 +153,7 @@
 						"lines" : [  ]
 					}
 ,
-					"patching_rect" : [ 673.0, 82.0, 25.0, 22.0 ],
+					"patching_rect" : [ 732.0, 468.0, 25.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -102,29 +167,136 @@
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-42",
+					"border" : 0,
+					"filename" : "helpdetails.js",
+					"id" : "obj-2",
+					"ignoreclick" : 1,
+					"jsarguments" : [ "crow.inputs" ],
+					"maxclass" : "jsui",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 33.5, 20.5, 560.0, 124.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"bubble" : 1,
+					"id" : "obj-41",
 					"linecount" : 3,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 663.3499755859375, 488.5, 272.0, 47.0 ],
-					"text" : "NB: If you are connected to another [crow] object already, please add [r commands_to_crow] to that patch instead of connecting to this [crow]"
+					"patching_rect" : [ 755.0, 326.0, 125.0, 51.0 ],
+					"text" : "send CV to crow's second input jack to control this dial"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-39",
+					"ignoreclick" : 1,
+					"maxclass" : "live.dial",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "float" ],
+					"parameter_enable" : 1,
+					"patching_rect" : [ 716.0, 328.0, 46.0, 48.0 ],
+					"saved_attribute_attributes" : 					{
+						"valueof" : 						{
+							"parameter_initial" : [ 0 ],
+							"parameter_shortname" : "In 2 CV",
+							"parameter_type" : 0,
+							"parameter_unitstyle" : 9,
+							"parameter_units" : "%.2fV",
+							"parameter_mmin" : -5.0,
+							"parameter_longname" : "live.dial[7]",
+							"parameter_initial_enable" : 1,
+							"parameter_mmax" : 10.0
+						}
+
+					}
+,
+					"varname" : "live.dial[7]"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-34",
+					"maxclass" : "button",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 607.0, 365.0, 24.0, 24.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-32",
+					"maxclass" : "button",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 539.0, 365.0, 24.0, 24.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"bubble" : 1,
+					"id" : "obj-30",
+					"linecount" : 4,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 121.0, 305.0, 163.0, 64.0 ],
+					"text" : "crow.inputs requires your patch to have a [crow] object set up with these send and receives"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"bubble" : 1,
+					"id" : "obj-26",
+					"linecount" : 3,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 737.0, 259.0, 200.0, 51.0 ],
+					"text" : "load this gui into your own patches by adding a new object: [bpatcher crow.inputs] "
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"bubble" : 1,
+					"id" : "obj-22",
+					"linecount" : 2,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 104.5, 196.0, 232.0, 37.0 ],
+					"text" : "first, disconnect from any other crow objects and connect to this one"
 				}
 
 			}
 , 			{
 				"box" : 				{
 					"activebgoncolor" : [ 0.427450980392157, 0.843137254901961, 1.0, 1.0 ],
-					"id" : "obj-43",
+					"id" : "obj-21",
 					"maxclass" : "live.text",
 					"mode" : 0,
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"parameter_enable" : 1,
-					"patching_rect" : [ 776.8499755859375, 456.0, 60.0, 20.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 675.0, 71.0, 44.0, 15.0 ],
+					"patching_rect" : [ 37.5, 203.0, 60.0, 20.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_shortname" : "live.text[1]",
@@ -144,12 +316,12 @@
 , 			{
 				"box" : 				{
 					"hidden" : 1,
-					"id" : "obj-44",
+					"id" : "obj-25",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "open" ],
-					"patching_rect" : [ 591.8499755859375, 472.0, 42.0, 22.0 ],
+					"patching_rect" : [ 42.0, 172.0, 42.0, 22.0 ],
 					"text" : "t open"
 				}
 
@@ -162,93 +334,60 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 591.8499755859375, 501.0, 51.0, 22.0 ],
+					"patching_rect" : [ 42.0, 196.0, 51.0, 22.0 ],
 					"text" : "pcontrol"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-45",
-					"maxclass" : "newobj",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 646.8499755859375, 455.0, 123.0, 22.0 ],
-					"text" : "r commands_to_crow"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-22",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 3,
-					"outlettype" : [ "", "bang", "" ],
-					"patching_rect" : [ 646.8499755859375, 554.0, 190.0, 22.0 ],
-					"text" : "crow"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontface" : 2,
-					"id" : "obj-36",
-					"linecount" : 2,
+					"bubble" : 1,
+					"bubbleside" : 3,
+					"fontface" : 0,
+					"id" : "obj-15",
+					"linecount" : 4,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 574.0, 168.5, 289.0, 33.0 ],
-					"text" : "create an envelope with randomized peak value and the default adsr values on crow output #2"
+					"patching_rect" : [ 466.5, 401.0, 114.0, 64.0 ],
+					"text" : "send triggers to crow's first input jack to advance this counter"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-29",
-					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 531.5999755859375, 247.0, 55.0, 22.0 ],
-					"text" : "pipe 300"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-28",
-					"maxclass" : "newobj",
+					"bubble" : 1,
+					"id" : "obj-13",
+					"maxclass" : "comment",
 					"numinlets" : 1,
-					"numoutlets" : 3,
-					"outlettype" : [ "int", "int", "bang" ],
-					"patching_rect" : [ 531.5999755859375, 205.0, 145.0, 22.0 ],
-					"text" : "t 0 1 b"
+					"numoutlets" : 0,
+					"patching_rect" : [ 737.0, 196.0, 172.0, 24.0 ],
+					"text" : "set input 2 to 'stream' mode"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-26",
-					"maxclass" : "button",
+					"bubble" : 1,
+					"bubbleside" : 3,
+					"id" : "obj-12",
+					"maxclass" : "comment",
 					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "bang" ],
+					"numoutlets" : 0,
+					"patching_rect" : [ 362.0, 196.0, 175.0, 24.0 ],
+					"text" : "set input 1 to 'change' mode"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-9",
+					"maxclass" : "number",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 531.5999755859375, 173.0, 24.0, 24.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-8",
-					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "float" ],
-					"patching_rect" : [ 657.5999755859375, 342.0, 29.5, 22.0 ],
-					"text" : "+ 5."
+					"patching_rect" : [ 589.0, 468.0, 50.0, 22.0 ]
 				}
 
 			}
@@ -256,11 +395,10 @@
 				"box" : 				{
 					"id" : "obj-7",
 					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "float" ],
-					"patching_rect" : [ 657.5999755859375, 310.333343505859375, 29.5, 22.0 ],
-					"text" : "* 5."
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 41.0, 382.0, 139.0, 22.0 ],
+					"text" : "s commands_from_crow"
 				}
 
 			}
@@ -268,51 +406,11 @@
 				"box" : 				{
 					"id" : "obj-6",
 					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "float" ],
-					"patching_rect" : [ 657.5999755859375, 278.666656494140625, 45.0, 22.0 ],
-					"text" : "/ 1000."
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-3",
-					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "int" ],
-					"patching_rect" : [ 657.5999755859375, 247.0, 79.0, 22.0 ],
-					"text" : "random 1000"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-1",
-					"maxclass" : "newobj",
-					"numinlets" : 6,
+					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 531.5999755859375, 384.0, 75.5, 22.0 ],
-					"text" : "crow.adsr 2"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"border" : 0,
-					"filename" : "helpdetails.js",
-					"id" : "obj-4",
-					"ignoreclick" : 1,
-					"jsarguments" : [ "crow.adsr" ],
-					"maxclass" : "jsui",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 15.0, 11.0, 540.0, 124.0 ]
+					"patching_rect" : [ 41.0, 270.0, 123.0, 22.0 ],
+					"text" : "r commands_to_crow"
 				}
 
 			}
@@ -320,345 +418,110 @@
 				"box" : 				{
 					"id" : "obj-5",
 					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 15.0, 554.0, 125.0, 22.0 ],
-					"text" : "s commands_to_crow"
+					"numinlets" : 3,
+					"numoutlets" : 3,
+					"outlettype" : [ "bang", "bang", "" ],
+					"patching_rect" : [ 539.0, 334.0, 119.0, 22.0 ],
+					"text" : "sel 0 1"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"fontface" : 2,
-					"id" : "obj-27",
-					"linecount" : 8,
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 232.5, 414.0, 143.0, 114.0 ],
-					"text" : "nb:  you cannot dynamically change which output index the adsr speaks to.\n\nuse multiple [crow.adsr] objects if you want to address other outputs! "
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontface" : 3,
-					"id" : "obj-25",
-					"linecount" : 7,
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 40.0, 414.0, 171.0, 100.0 ],
-					"text" : "arguments: \n- output index (1-4, required)\n- peak (volts)\n- attack (s)\n- decay (s)\n- sustain (volts)\n- release (s)"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontface" : 2,
-					"id" : "obj-23",
-					"linecount" : 2,
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 103.0, 244.0, 402.0, 33.0 ],
-					"text" : "NB: If these controls are changed while an envelope is currently active, the new parameters will not take effect until a subsequent envelope."
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-21",
-					"maxclass" : "live.dial",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "float" ],
-					"parameter_enable" : 1,
-					"patching_rect" : [ 419.0, 287.0, 86.0, 48.0 ],
-					"saved_attribute_attributes" : 					{
-						"valueof" : 						{
-							"parameter_initial" : [ 0.5 ],
-							"parameter_shortname" : "Release",
-							"parameter_type" : 0,
-							"parameter_unitstyle" : 9,
-							"parameter_units" : "%.2f s",
-							"parameter_mmin" : 0.005,
-							"parameter_exponent" : 3.33,
-							"parameter_longname" : "live.dial[5]",
-							"parameter_initial_enable" : 1,
-							"parameter_mmax" : 5.0
-						}
-
-					}
-,
-					"varname" : "live.dial[4]"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-20",
-					"maxclass" : "live.dial",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "float" ],
-					"parameter_enable" : 1,
-					"patching_rect" : [ 257.399993896484375, 287.0, 86.0, 48.0 ],
-					"saved_attribute_attributes" : 					{
-						"valueof" : 						{
-							"parameter_initial" : [ 0.5 ],
-							"parameter_shortname" : "Decay",
-							"parameter_type" : 0,
-							"parameter_unitstyle" : 9,
-							"parameter_units" : "%.2f s",
-							"parameter_mmin" : 0.005,
-							"parameter_exponent" : 3.33,
-							"parameter_longname" : "live.dial[4]",
-							"parameter_initial_enable" : 1,
-							"parameter_mmax" : 5.0
-						}
-
-					}
-,
-					"varname" : "live.dial[3]"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-17",
-					"maxclass" : "live.dial",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "float" ],
-					"parameter_enable" : 1,
-					"patching_rect" : [ 176.600006103515625, 287.0, 86.0, 48.0 ],
-					"saved_attribute_attributes" : 					{
-						"valueof" : 						{
-							"parameter_initial" : [ 0.5 ],
-							"parameter_shortname" : "Attack",
-							"parameter_type" : 0,
-							"parameter_unitstyle" : 9,
-							"parameter_units" : "%.2f s",
-							"parameter_mmin" : 0.005,
-							"parameter_exponent" : 3.33,
-							"parameter_longname" : "live.dial[2]",
-							"parameter_initial_enable" : 1,
-							"parameter_mmax" : 5.0
-						}
-
-					}
-,
-					"varname" : "live.dial[2]"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-16",
-					"maxclass" : "live.dial",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "float" ],
-					"parameter_enable" : 1,
-					"patching_rect" : [ 338.20001220703125, 287.0, 86.0, 48.0 ],
-					"saved_attribute_attributes" : 					{
-						"valueof" : 						{
-							"parameter_initial" : [ 5.0 ],
-							"parameter_shortname" : "Sustain Voltage",
-							"parameter_type" : 0,
-							"parameter_unitstyle" : 9,
-							"parameter_units" : "%.2fV",
-							"parameter_longname" : "live.dial[1]",
-							"parameter_initial_enable" : 1,
-							"parameter_mmax" : 10.0
-						}
-
-					}
-,
-					"varname" : "live.dial[1]"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-15",
-					"maxclass" : "live.dial",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "float" ],
-					"parameter_enable" : 1,
-					"patching_rect" : [ 95.800003051757813, 287.0, 86.0, 48.0 ],
-					"saved_attribute_attributes" : 					{
-						"valueof" : 						{
-							"parameter_initial" : [ 8.0 ],
-							"parameter_shortname" : "Peak Voltage",
-							"parameter_type" : 0,
-							"parameter_unitstyle" : 9,
-							"parameter_units" : "%.2fV",
-							"parameter_longname" : "live.dial",
-							"parameter_initial_enable" : 1,
-							"parameter_mmax" : 10.0
-						}
-
-					}
-,
-					"varname" : "live.dial"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"bubble" : 1,
-					"id" : "obj-12",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 49.0, 201.0, 201.0, 24.0 ],
-					"text" : "0/1 to Activate/Release envelope"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-10",
-					"maxclass" : "toggle",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "int" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 15.0, 201.0, 24.0, 24.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-2",
+					"id" : "obj-4",
 					"maxclass" : "newobj",
-					"numinlets" : 6,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 15.0, 384.0, 423.0, 22.0 ],
-					"text" : "crow.adsr 1 8 0.5 0.5 5 0.7"
+					"numinlets" : 5,
+					"numoutlets" : 4,
+					"outlettype" : [ "int", "", "", "int" ],
+					"patching_rect" : [ 589.0, 422.0, 69.0, 22.0 ],
+					"text" : "counter 1 8"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-3",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 3,
+					"outlettype" : [ "", "bang", "" ],
+					"patching_rect" : [ 41.0, 326.0, 70.0, 22.0 ],
+					"text" : "crow"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"bgmode" : 0,
+					"border" : 0,
+					"clickthrough" : 0,
+					"enablehscroll" : 0,
+					"enablevscroll" : 0,
+					"id" : "obj-1",
+					"lockeddragscroll" : 0,
+					"maxclass" : "bpatcher",
+					"name" : "crow.inputs.maxpat",
+					"numinlets" : 0,
+					"numoutlets" : 4,
+					"offset" : [ 0.0, 0.0 ],
+					"outlettype" : [ "", "", "", "" ],
+					"patching_rect" : [ 539.0, 196.0, 196.0, 114.0 ],
+					"viewvisibility" : 1
 				}
 
 			}
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
+					"destination" : [ "obj-39", 0 ],
+					"source" : [ "obj-1", 3 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-5", 0 ],
-					"midpoints" : [ 541.0999755859375, 540.0, 24.5, 540.0 ],
 					"source" : [ "obj-1", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-2", 0 ],
-					"source" : [ "obj-10", 0 ]
+					"destination" : [ "obj-10", 0 ],
+					"hidden" : 1,
+					"source" : [ "obj-11", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-2", 1 ],
-					"source" : [ "obj-15", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-2", 4 ],
+					"destination" : [ "obj-18", 0 ],
+					"hidden" : 1,
 					"source" : [ "obj-16", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-2", 2 ],
-					"source" : [ "obj-17", 0 ]
+					"destination" : [ "obj-11", 0 ],
+					"hidden" : 1,
+					"source" : [ "obj-18", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-5", 0 ],
-					"source" : [ "obj-2", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-2", 3 ],
-					"source" : [ "obj-20", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-2", 5 ],
+					"destination" : [ "obj-25", 0 ],
+					"hidden" : 1,
 					"source" : [ "obj-21", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-22", 0 ],
-					"hidden" : 1,
-					"midpoints" : [ 601.3499755859375, 539.0, 656.3499755859375, 539.0 ],
-					"source" : [ "obj-24", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-28", 0 ],
-					"source" : [ "obj-26", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-1", 0 ],
-					"midpoints" : [ 604.0999755859375, 321.0, 541.0999755859375, 321.0 ],
-					"source" : [ "obj-28", 1 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-29", 0 ],
-					"source" : [ "obj-28", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-3", 0 ],
-					"source" : [ "obj-28", 2 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-1", 0 ],
-					"source" : [ "obj-29", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-6", 0 ],
-					"source" : [ "obj-3", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-44", 0 ],
 					"hidden" : 1,
-					"midpoints" : [ 786.3499755859375, 479.0, 771.0, 479.0, 771.0, 440.0, 601.3499755859375, 440.0 ],
-					"source" : [ "obj-43", 0 ]
+					"source" : [ "obj-24", 0 ]
 				}
 
 			}
@@ -666,47 +529,74 @@
 				"patchline" : 				{
 					"destination" : [ "obj-24", 0 ],
 					"hidden" : 1,
-					"source" : [ "obj-44", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-22", 0 ],
-					"source" : [ "obj-45", 0 ]
+					"source" : [ "obj-25", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-7", 0 ],
+					"source" : [ "obj-3", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-9", 0 ],
+					"source" : [ "obj-4", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-32", 0 ],
+					"source" : [ "obj-5", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-34", 0 ],
+					"order" : 0,
+					"source" : [ "obj-5", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-4", 0 ],
+					"order" : 1,
+					"source" : [ "obj-5", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-3", 0 ],
 					"source" : [ "obj-6", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-8", 0 ],
-					"source" : [ "obj-7", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-1", 1 ],
-					"midpoints" : [ 667.0999755859375, 366.0, 552.399975585937455, 366.0 ],
-					"source" : [ "obj-8", 0 ]
 				}
 
 			}
  ],
 		"parameters" : 		{
-			"obj-21" : [ "live.dial[5]", "Release", 0 ],
-			"obj-16" : [ "live.dial[1]", "Sustain Voltage", 0 ],
-			"obj-15" : [ "live.dial", "Peak Voltage", 0 ],
-			"obj-43" : [ "live.text[1]", "live.text[1]", 0 ],
-			"obj-17" : [ "live.dial[2]", "Attack", 0 ],
-			"obj-20" : [ "live.dial[4]", "Decay", 0 ],
+			"obj-39" : [ "live.dial[7]", "In 2 CV", 0 ],
+			"obj-1::obj-56::obj-46" : [ "1 Threshold[3]", "Threshold", 0 ],
+			"obj-1::obj-56::obj-45" : [ "1 Hysteresis[3]", "Hysteresis", 0 ],
+			"obj-1::obj-55::obj-22" : [ "2 Direction[3]", "Direction", 0 ],
+			"obj-1::obj-55::obj-18" : [ "2 Stream Rate[3]", "Rate", 0 ],
+			"obj-1::obj-56::obj-1" : [ "1 Smooth[3]", "Smooth", 0 ],
+			"obj-1::obj-55::obj-45" : [ "2 Hysteresis[3]", "Hysteresis", 0 ],
+			"obj-1::obj-55::obj-54" : [ "live.numbox[7]", "live.numbox", 0 ],
+			"obj-1::obj-56::obj-18" : [ "1 Stream Rate[3]", "Rate", 0 ],
+			"obj-1::obj-55::obj-1" : [ "2 Smooth[3]", "Smooth", 0 ],
+			"obj-16" : [ "live.text[2]", "live.text[2]", 0 ],
+			"obj-1::obj-28" : [ "live.tab[3]", "live.tab", 0 ],
+			"obj-1::obj-56::obj-54" : [ "live.numbox[8]", "live.numbox", 0 ],
+			"obj-1::obj-56::obj-22" : [ "1 Direction[3]", "Direction", 0 ],
+			"obj-21" : [ "live.text[1]", "live.text[1]", 0 ],
+			"obj-1::obj-55::obj-21" : [ "2 Input Mode[3]", "Input Mode", 0 ],
+			"obj-1::obj-56::obj-21" : [ "1 Input Mode[3]", "Input Mode", 0 ],
+			"obj-1::obj-55::obj-46" : [ "2 Threshold[3]", "Threshold", 0 ],
 			"parameterbanks" : 			{
 
 			}
@@ -714,16 +604,24 @@
 		}
 ,
 		"dependency_cache" : [ 			{
-				"name" : "crow.adsr.maxpat",
-				"bootpath" : "~/Dropbox/crow/m4lfork/crow-max-and-m4l/crow_max/abstractions",
-				"patcherrelativepath" : "../abstractions",
+				"name" : "crow.inputs.maxpat",
+				"bootpath" : "~/Dropbox/crow/m4lfork/crow-max-and-m4l/crow_max/bpatcher",
+				"patcherrelativepath" : "../bpatcher",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "helpdetails.js",
-				"bootpath" : "C74:/help/resources",
-				"type" : "TEXT",
+				"name" : "crow.input.gui.maxpat",
+				"bootpath" : "~/Dropbox/crow/m4lfork/crow-max-and-m4l/crow_max/bpatcher",
+				"patcherrelativepath" : "../bpatcher",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "crow.var.maxpat",
+				"bootpath" : "~/Dropbox/crow/m4lfork/crow-max-and-m4l/crow_max/abstractions",
+				"patcherrelativepath" : "../abstractions",
+				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
@@ -738,6 +636,12 @@
 				"bootpath" : "~/Dropbox/crow/m4lfork/crow-max-and-m4l/crow_max",
 				"patcherrelativepath" : "..",
 				"type" : "Jlua",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "helpdetails.js",
+				"bootpath" : "C74:/help/resources",
+				"type" : "TEXT",
 				"implicit" : 1
 			}
  ],

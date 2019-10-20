@@ -89,6 +89,7 @@
 		<seealso name="crow"/>
 		<seealso name="crow.var"/>
 		<seealso name="crow.function"/>
+		<seealso name="crow.inputs"/>
 		<seealso name="crow.adsr"/>
 		<seealso name="crow.ar"/>
 		<seealso name="crow.pulse"/>

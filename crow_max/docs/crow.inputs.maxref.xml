@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml-stylesheet href="./c74ref.xsl" type="text/xsl"?>
+
+<c74object name="crow.volts" module="crow">
+
+	<digest>
+		Configure inputs and receive CV from crow.
+	</digest>
+
+	<description>
+		Intended to be loaded as a <o>bpatcher</o>, this graphical user interface talks to any <o>crow</o> object with a <o>send</o>/<o>receive</o> pair: <m>commands_from_crow</m> and <m>commands_to_crow</m>.  You can configure the inputs to detect triggers/gates or stream and smooth CV.
+	</description>
+
+	<!--METADATA-->
+	<metadatalist>
+		<metadata name="author">Sam Wolk</metadata>
+		<metadata name="tag">crow</metadata>
+		<metadata name="tag">crow help</metadata>
+		<metadata name="tag">Eurorack</metadata>
+	</metadatalist>
+
+	<!--ARGUMENTS-->
+	<objarglist>
+	</objarglist>
+
+	<!--MESSAGES-->
+	<methodlist>
+	</methodlist>
+
+	<!--DISCUSSION-->
+	<discussion>
+	</discussion>
+
+	<!--SEEALSO-->
+	<seealsolist>
+		<seealso name="crow"/>
+		<seealso name="crow.var"/>
+		<seealso name="crow.volts"/>
+		<seealso name="crow.function"/>
+		<seealso name="crow.adsr"/>
+		<seealso name="crow.ar"/>
+		<seealso name="crow.pulse"/>
+		<seealso name="crow.n2v"/>	
+	</seealsolist>
+
+	
+
+</c74object>

@@ -91,8 +91,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1238.0, 537.111083984375, 237.0, 22.0 ],
-					"text" : "sprintf symout output[%d].action({ to(0\\,0) })"
+					"patching_rect" : [ 1238.0, 537.111083984375, 201.0, 22.0 ],
+					"text" : "sprintf symout output[%d]({ to(0\\,0) })"
 				}
 
 			}

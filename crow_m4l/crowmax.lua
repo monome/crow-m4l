@@ -79,7 +79,7 @@ function tell_crow( str )
 	if string.find( str, "^%^%^" ) then -- crow command
 		outlet(0, string_to_serial( string.sub( str, 1, 3)))
 	else -- code block
-		print(string.len(str))
+		-- print(string.len(str))
 		outlet(0, string_to_serial( str))
 	end
 end

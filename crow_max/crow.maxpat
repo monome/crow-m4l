@@ -94,7 +94,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 36.5, 295.0, 32.0, 22.0 ],
+					"patching_rect" : [ 53.5, 288.0, 32.0, 22.0 ],
 					"text" : "print"
 				}
 
@@ -184,7 +184,7 @@
 					"bgfillcolor_proportion" : 0.5,
 					"bgfillcolor_type" : "color",
 					"id" : "obj-2",
-					"items" : "COM10",
+					"items" : "<empty>",
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -1075,7 +1075,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-9", 2 ],
-					"midpoints" : [ 46.0, 318.0, 33.0, 318.0, 33.0, 249.0, 261.0, 249.0, 261.0, 213.0, 251.5, 213.0 ],
+					"midpoints" : [ 63.0, 318.0, 33.0, 318.0, 33.0, 249.0, 261.0, 249.0, 261.0, 213.0, 251.5, 213.0 ],
 					"source" : [ "obj-11", 0 ]
 				}
 
@@ -1090,7 +1090,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-11", 0 ],
-					"midpoints" : [ 136.5, 282.0, 46.0, 282.0 ],
+					"midpoints" : [ 136.5, 282.0, 63.0, 282.0 ],
 					"source" : [ "obj-19", 0 ]
 				}
 

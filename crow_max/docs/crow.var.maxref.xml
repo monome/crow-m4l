@@ -130,7 +130,6 @@
 		<seealso name="crow.inputs"/>
 		<seealso name="crow.adsr"/>
 		<seealso name="crow.ar"/>
-		<seealso name="crow.pulse"/>
 		<seealso name="crow.n2v"/>		
 	</seealsolist>
 

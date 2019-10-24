@@ -8,7 +8,7 @@
 	</digest>
 
 	<description>
-		<o>crow.function</o> can be used to execute any function defined on crow by connecting <o>crow.function</o>'s output to the <o>crow</o> object.
+		<o>crow.function</o> can be used to execute any function defined on crow by connecting <o>crow.function</o>'s output to the <o>crow</o> object.  The right outlet will emit a string which can be passed as an input to other <o>crow.function</o> objects. 
 	</description>
 
 	<!--METADATA-->
@@ -66,12 +66,12 @@
 	<seealsolist>
 		<seealso name="crow"/>
 		<seealso name="crow.volts"/>
+		<seealso name="crow.makefunction"/>
 		<seealso name="crow.var"/>
 		<seealso name="crow.inputs"/>
 		<seealso name="crow.n2v"/>
 		<seealso name="crow.adsr"/>		
 		<seealso name="crow.ar"/>
-		<seealso name="crow.pulse"/>
 		
 	</seealsolist>
 

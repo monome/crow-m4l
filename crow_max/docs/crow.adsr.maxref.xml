@@ -104,11 +104,11 @@
 	<!--SEEALSO-->
 	<seealsolist>
 		<seealso name="crow"/>
+		<seealso name="crow.ar"/>		
 		<seealso name="crow.volts"/>
 		<seealso name="crow.var"/>
 		<seealso name="crow.function"/>
 		<seealso name="crow.n2v"/>
-		<seealso name="crow.function"/>		
 		<seealso name="crow.inputs"/>
 
 		

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <?xml-stylesheet href="./c74ref.xsl" type="text/xsl"?>
 
-<c74object name="crow.volts" module="crow">
+<c74object name="crow.makefunction" module="crow">
 
 	<digest>
-		Configure inputs and receive CV from crow.
+		Create a function which can be used to make a calculation.  
 	</digest>
 
 	<description>
-		Intended to be loaded as a <o>bpatcher</o>, this graphical user interface talks to any <o>crow</o> object with a <o>send</o>/<o>receive</o> pair: <m>commands_from_crow</m> and <m>commands_to_crow</m>.  You can configure the inputs to detect triggers/gates or stream and smooth CV.
+		<o>crow.makefunction</o> can be used to generate an anonymous function which returns the value of <o>crow.makefunction</o>'s input at runtime.
 	</description>
 
 	<!--METADATA-->
@@ -21,10 +21,12 @@
 
 	<!--ARGUMENTS-->
 	<objarglist>
+	
 	</objarglist>
 
 	<!--MESSAGES-->
 	<methodlist>
+	
 	</methodlist>
 
 	<!--DISCUSSION-->
@@ -34,12 +36,14 @@
 	<!--SEEALSO-->
 	<seealsolist>
 		<seealso name="crow"/>
-		<seealso name="crow.var"/>
 		<seealso name="crow.volts"/>
 		<seealso name="crow.function"/>
-		<seealso name="crow.adsr"/>
+		<seealso name="crow.var"/>
+		<seealso name="crow.inputs"/>
+		<seealso name="crow.n2v"/>
+		<seealso name="crow.adsr"/>		
 		<seealso name="crow.ar"/>
-		<seealso name="crow.n2v"/>	
+		
 	</seealsolist>
 
 	

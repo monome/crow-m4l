@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 236.0, 139.0, 1271.0, 558.0 ],
+		"rect" : [ 100.0, 100.0, 1271.0, 558.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -108,7 +108,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 69.5, 406.0, 439.0, 20.0 ],
-					"text" : "arguments: initial hardware output (int, req'd) and slew time (float, optional)"
+					"text" : "arguments: hardware output (1-4) and slew time (float, optional)"
 				}
 
 			}
@@ -151,11 +151,11 @@
 					"presentation_rect" : [ 630.0, 26.0, 44.0, 15.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
+							"parameter_longname" : "live.text[1]",
+							"parameter_mmax" : 1.0,
 							"parameter_shortname" : "live.text[1]",
 							"parameter_enum" : [ "val1", "val2" ],
-							"parameter_type" : 2,
-							"parameter_longname" : "live.text[1]",
-							"parameter_mmax" : 1.0
+							"parameter_type" : 2
 						}
 
 					}
@@ -229,11 +229,11 @@
 					"patching_rect" : [ 373.0, 185.5, 52.0, 83.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
+							"parameter_longname" : "live.tab",
 							"parameter_shortname" : "live.tab",
 							"parameter_enum" : [ "Output 1", "Output 2", "Output 3", "Output 4" ],
 							"parameter_type" : 2,
-							"parameter_unitstyle" : 0,
-							"parameter_longname" : "live.tab"
+							"parameter_unitstyle" : 0
 						}
 
 					}
@@ -345,7 +345,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 236.0, 165.0, 1271.0, 532.0 ],
+						"rect" : [ 0.0, 26.0, 1271.0, 532.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -521,12 +521,12 @@
 									"patching_rect" : [ 967.0, 33.5, 40.0, 15.0 ],
 									"saved_attribute_attributes" : 									{
 										"valueof" : 										{
+											"parameter_longname" : "live.text",
+											"parameter_mmax" : 1.0,
 											"parameter_initial" : [ 1 ],
 											"parameter_shortname" : "live.text",
 											"parameter_enum" : [ "off", "on" ],
-											"parameter_type" : 2,
-											"parameter_longname" : "live.text",
-											"parameter_mmax" : 1.0
+											"parameter_type" : 2
 										}
 
 									}
@@ -634,10 +634,10 @@
 									"patching_rect" : [ 868.0, 172.0, 338.0, 150.0 ],
 									"saved_attribute_attributes" : 									{
 										"valueof" : 										{
-											"parameter_shortname" : "live.step",
-											"parameter_type" : 3,
 											"parameter_longname" : "live.step",
-											"parameter_invisible" : 1
+											"parameter_invisible" : 1,
+											"parameter_shortname" : "live.step",
+											"parameter_type" : 3
 										}
 
 									}
@@ -657,13 +657,13 @@
 									"patching_rect" : [ 756.017822265625, 262.0, 58.0, 48.0 ],
 									"saved_attribute_attributes" : 									{
 										"valueof" : 										{
-											"parameter_shortname" : "Slew Time",
-											"parameter_type" : 0,
-											"parameter_unitstyle" : 9,
 											"parameter_units" : "s",
 											"parameter_exponent" : 3.33,
 											"parameter_longname" : "live.dial[23]",
-											"parameter_mmax" : 60.0
+											"parameter_mmax" : 60.0,
+											"parameter_shortname" : "Slew Time",
+											"parameter_type" : 0,
+											"parameter_unitstyle" : 9
 										}
 
 									}
@@ -683,15 +683,15 @@
 									"patching_rect" : [ 734.017822265625, 202.0, 58.0, 48.0 ],
 									"saved_attribute_attributes" : 									{
 										"valueof" : 										{
-											"parameter_initial" : [ 0.15 ],
-											"parameter_shortname" : "Voltage",
-											"parameter_type" : 0,
-											"parameter_unitstyle" : 9,
 											"parameter_units" : "%.2fV",
 											"parameter_mmin" : -5.0,
 											"parameter_longname" : "live.dial[13]",
 											"parameter_initial_enable" : 1,
-											"parameter_mmax" : 10.0
+											"parameter_mmax" : 10.0,
+											"parameter_initial" : [ 0.15 ],
+											"parameter_shortname" : "Voltage",
+											"parameter_type" : 0,
+											"parameter_unitstyle" : 9
 										}
 
 									}
@@ -711,13 +711,13 @@
 									"patching_rect" : [ 656.2857666015625, 262.0, 58.0, 48.0 ],
 									"saved_attribute_attributes" : 									{
 										"valueof" : 										{
-											"parameter_shortname" : "Slew Time",
-											"parameter_type" : 0,
-											"parameter_unitstyle" : 9,
 											"parameter_units" : "s",
 											"parameter_exponent" : 3.33,
 											"parameter_longname" : "live.dial[24]",
-											"parameter_mmax" : 60.0
+											"parameter_mmax" : 60.0,
+											"parameter_shortname" : "Slew Time",
+											"parameter_type" : 0,
+											"parameter_unitstyle" : 9
 										}
 
 									}
@@ -737,15 +737,15 @@
 									"patching_rect" : [ 634.2857666015625, 202.0, 58.0, 48.0 ],
 									"saved_attribute_attributes" : 									{
 										"valueof" : 										{
-											"parameter_initial" : [ 0.13 ],
-											"parameter_shortname" : "Voltage",
-											"parameter_type" : 0,
-											"parameter_unitstyle" : 9,
 											"parameter_units" : "%.2fV",
 											"parameter_mmin" : -5.0,
 											"parameter_longname" : "live.dial[25]",
 											"parameter_initial_enable" : 1,
-											"parameter_mmax" : 10.0
+											"parameter_mmax" : 10.0,
+											"parameter_initial" : [ 0.13 ],
+											"parameter_shortname" : "Voltage",
+											"parameter_type" : 0,
+											"parameter_unitstyle" : 9
 										}
 
 									}
@@ -765,13 +765,13 @@
 									"patching_rect" : [ 555.91070556640625, 262.0, 58.0, 48.0 ],
 									"saved_attribute_attributes" : 									{
 										"valueof" : 										{
-											"parameter_shortname" : "Slew Time",
-											"parameter_type" : 0,
-											"parameter_unitstyle" : 9,
 											"parameter_units" : "s",
 											"parameter_exponent" : 3.33,
 											"parameter_longname" : "live.dial[14]",
-											"parameter_mmax" : 60.0
+											"parameter_mmax" : 60.0,
+											"parameter_shortname" : "Slew Time",
+											"parameter_type" : 0,
+											"parameter_unitstyle" : 9
 										}
 
 									}
@@ -791,15 +791,15 @@
 									"patching_rect" : [ 533.91070556640625, 202.0, 58.0, 48.0 ],
 									"saved_attribute_attributes" : 									{
 										"valueof" : 										{
-											"parameter_initial" : [ 0.52 ],
-											"parameter_shortname" : "Voltage",
-											"parameter_type" : 0,
-											"parameter_unitstyle" : 9,
 											"parameter_units" : "%.2fV",
 											"parameter_mmin" : -5.0,
 											"parameter_longname" : "live.dial[26]",
 											"parameter_initial_enable" : 1,
-											"parameter_mmax" : 10.0
+											"parameter_mmax" : 10.0,
+											"parameter_initial" : [ 0.52 ],
+											"parameter_shortname" : "Voltage",
+											"parameter_type" : 0,
+											"parameter_unitstyle" : 9
 										}
 
 									}
@@ -819,13 +819,13 @@
 									"patching_rect" : [ 455.928558349609375, 262.0, 58.0, 48.0 ],
 									"saved_attribute_attributes" : 									{
 										"valueof" : 										{
-											"parameter_shortname" : "Slew Time",
-											"parameter_type" : 0,
-											"parameter_unitstyle" : 9,
 											"parameter_units" : "s",
 											"parameter_exponent" : 3.33,
 											"parameter_longname" : "live.dial[27]",
-											"parameter_mmax" : 60.0
+											"parameter_mmax" : 60.0,
+											"parameter_shortname" : "Slew Time",
+											"parameter_type" : 0,
+											"parameter_unitstyle" : 9
 										}
 
 									}
@@ -845,15 +845,15 @@
 									"patching_rect" : [ 433.928558349609375, 202.0, 58.0, 48.0 ],
 									"saved_attribute_attributes" : 									{
 										"valueof" : 										{
-											"parameter_initial" : [ 0.44 ],
-											"parameter_shortname" : "Voltage",
-											"parameter_type" : 0,
-											"parameter_unitstyle" : 9,
 											"parameter_units" : "%.2fV",
 											"parameter_mmin" : -5.0,
 											"parameter_longname" : "live.dial[15]",
 											"parameter_initial_enable" : 1,
-											"parameter_mmax" : 10.0
+											"parameter_mmax" : 10.0,
+											"parameter_initial" : [ 0.44 ],
+											"parameter_shortname" : "Voltage",
+											"parameter_type" : 0,
+											"parameter_unitstyle" : 9
 										}
 
 									}
@@ -873,13 +873,13 @@
 									"patching_rect" : [ 356.0892333984375, 262.0, 58.0, 48.0 ],
 									"saved_attribute_attributes" : 									{
 										"valueof" : 										{
-											"parameter_shortname" : "Slew Time",
-											"parameter_type" : 0,
-											"parameter_unitstyle" : 9,
 											"parameter_units" : "s",
 											"parameter_exponent" : 3.33,
 											"parameter_longname" : "live.dial[21]",
-											"parameter_mmax" : 60.0
+											"parameter_mmax" : 60.0,
+											"parameter_shortname" : "Slew Time",
+											"parameter_type" : 0,
+											"parameter_unitstyle" : 9
 										}
 
 									}
@@ -899,15 +899,15 @@
 									"patching_rect" : [ 334.0892333984375, 202.0, 58.0, 48.0 ],
 									"saved_attribute_attributes" : 									{
 										"valueof" : 										{
-											"parameter_initial" : [ 0.32 ],
-											"parameter_shortname" : "Voltage",
-											"parameter_type" : 0,
-											"parameter_unitstyle" : 9,
 											"parameter_units" : "%.2fV",
 											"parameter_mmin" : -5.0,
 											"parameter_longname" : "live.dial[12]",
 											"parameter_initial_enable" : 1,
-											"parameter_mmax" : 10.0
+											"parameter_mmax" : 10.0,
+											"parameter_initial" : [ 0.32 ],
+											"parameter_shortname" : "Voltage",
+											"parameter_type" : 0,
+											"parameter_unitstyle" : 9
 										}
 
 									}
@@ -927,13 +927,13 @@
 									"patching_rect" : [ 256.10711669921875, 262.0, 58.0, 48.0 ],
 									"saved_attribute_attributes" : 									{
 										"valueof" : 										{
-											"parameter_shortname" : "Slew Time",
-											"parameter_type" : 0,
-											"parameter_unitstyle" : 9,
 											"parameter_units" : "s",
 											"parameter_exponent" : 3.33,
 											"parameter_longname" : "live.dial[18]",
-											"parameter_mmax" : 60.0
+											"parameter_mmax" : 60.0,
+											"parameter_shortname" : "Slew Time",
+											"parameter_type" : 0,
+											"parameter_unitstyle" : 9
 										}
 
 									}
@@ -953,15 +953,15 @@
 									"patching_rect" : [ 234.10711669921875, 202.0, 58.0, 48.0 ],
 									"saved_attribute_attributes" : 									{
 										"valueof" : 										{
-											"parameter_initial" : [ 0.5 ],
-											"parameter_shortname" : "Voltage",
-											"parameter_type" : 0,
-											"parameter_unitstyle" : 9,
 											"parameter_units" : "%.2fV",
 											"parameter_mmin" : -5.0,
 											"parameter_longname" : "live.dial[22]",
 											"parameter_initial_enable" : 1,
-											"parameter_mmax" : 10.0
+											"parameter_mmax" : 10.0,
+											"parameter_initial" : [ 0.5 ],
+											"parameter_shortname" : "Voltage",
+											"parameter_type" : 0,
+											"parameter_unitstyle" : 9
 										}
 
 									}
@@ -981,13 +981,13 @@
 									"patching_rect" : [ 155.982147216796875, 262.0, 58.0, 48.0 ],
 									"saved_attribute_attributes" : 									{
 										"valueof" : 										{
-											"parameter_shortname" : "Slew Time",
-											"parameter_type" : 0,
-											"parameter_unitstyle" : 9,
 											"parameter_units" : "s",
 											"parameter_exponent" : 3.33,
 											"parameter_longname" : "live.dial[11]",
-											"parameter_mmax" : 60.0
+											"parameter_mmax" : 60.0,
+											"parameter_shortname" : "Slew Time",
+											"parameter_type" : 0,
+											"parameter_unitstyle" : 9
 										}
 
 									}
@@ -1007,15 +1007,15 @@
 									"patching_rect" : [ 133.982147216796875, 202.0, 58.0, 48.0 ],
 									"saved_attribute_attributes" : 									{
 										"valueof" : 										{
-											"parameter_initial" : [ 1.2 ],
-											"parameter_shortname" : "Voltage",
-											"parameter_type" : 0,
-											"parameter_unitstyle" : 9,
 											"parameter_units" : "%.2fV",
 											"parameter_mmin" : -5.0,
 											"parameter_longname" : "live.dial[17]",
 											"parameter_initial_enable" : 1,
-											"parameter_mmax" : 10.0
+											"parameter_mmax" : 10.0,
+											"parameter_initial" : [ 1.2 ],
+											"parameter_shortname" : "Voltage",
+											"parameter_type" : 0,
+											"parameter_unitstyle" : 9
 										}
 
 									}
@@ -1035,13 +1035,13 @@
 									"patching_rect" : [ 56.0, 262.0, 58.0, 48.0 ],
 									"saved_attribute_attributes" : 									{
 										"valueof" : 										{
-											"parameter_shortname" : "Slew Time",
-											"parameter_type" : 0,
-											"parameter_unitstyle" : 9,
 											"parameter_units" : "s",
 											"parameter_exponent" : 3.33,
 											"parameter_longname" : "live.dial[19]",
-											"parameter_mmax" : 60.0
+											"parameter_mmax" : 60.0,
+											"parameter_shortname" : "Slew Time",
+											"parameter_type" : 0,
+											"parameter_unitstyle" : 9
 										}
 
 									}
@@ -1061,15 +1061,15 @@
 									"patching_rect" : [ 34.0, 202.0, 58.0, 48.0 ],
 									"saved_attribute_attributes" : 									{
 										"valueof" : 										{
-											"parameter_initial" : [ 0 ],
-											"parameter_shortname" : "Voltage",
-											"parameter_type" : 0,
-											"parameter_unitstyle" : 9,
 											"parameter_units" : "%.2fV",
 											"parameter_mmin" : -5.0,
 											"parameter_longname" : "live.dial[20]",
 											"parameter_initial_enable" : 1,
-											"parameter_mmax" : 10.0
+											"parameter_mmax" : 10.0,
+											"parameter_initial" : [ 0 ],
+											"parameter_shortname" : "Voltage",
+											"parameter_type" : 0,
+											"parameter_unitstyle" : 9
 										}
 
 									}
@@ -1798,10 +1798,6 @@
 , 							{
 								"name" : "Luca",
 								"default" : 								{
-									"fontname" : [ "Open Sans Semibold" ],
-									"selectioncolor" : [ 0.720698, 0.16723, 0.080014, 1.0 ],
-									"textcolor_inverse" : [ 0.239216, 0.254902, 0.278431, 1.0 ],
-									"bgcolor" : [ 0.904179, 0.895477, 0.842975, 0.56 ],
 									"bgfillcolor" : 									{
 										"type" : "gradient",
 										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -1812,9 +1808,13 @@
 										"autogradient" : 0
 									}
 ,
+									"bgcolor" : [ 0.904179, 0.895477, 0.842975, 0.56 ],
 									"accentcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ],
+									"elementcolor" : [ 0.786675, 0.801885, 0.845022, 1.0 ],
 									"color" : [ 0.475135, 0.293895, 0.251069, 1.0 ],
-									"elementcolor" : [ 0.786675, 0.801885, 0.845022, 1.0 ]
+									"fontname" : [ "Open Sans Semibold" ],
+									"selectioncolor" : [ 0.720698, 0.16723, 0.080014, 1.0 ],
+									"textcolor_inverse" : [ 0.239216, 0.254902, 0.278431, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -1833,9 +1833,6 @@
 , 							{
 								"name" : "Transparent",
 								"default" : 								{
-									"fontname" : [ "Rubik" ],
-									"textcolor_inverse" : [ 0.0, 0.0, 0.0, 1.0 ],
-									"bgcolor" : [ 0.290196, 0.309804, 0.301961, 0.35 ],
 									"bgfillcolor" : 									{
 										"type" : "gradient",
 										"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -1847,11 +1844,14 @@
 									}
 ,
 									"textcolor" : [ 0.239216, 0.254902, 0.278431, 1.0 ],
+									"bgcolor" : [ 0.290196, 0.309804, 0.301961, 0.35 ],
 									"accentcolor" : [ 0.239216, 0.254902, 0.278431, 1.0 ],
-									"color" : [ 0.904179, 0.895477, 0.842975, 0.74 ],
 									"fontsize" : [ 12.0 ],
-									"textjustification" : [ 1 ],
-									"elementcolor" : [ 0.0, 0.0, 0.0, 1.0 ]
+									"elementcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
+									"color" : [ 0.904179, 0.895477, 0.842975, 0.74 ],
+									"fontname" : [ "Rubik" ],
+									"textcolor_inverse" : [ 0.0, 0.0, 0.0, 1.0 ],
+									"textjustification" : [ 1 ]
 								}
 ,
 								"parentstyle" : "",
@@ -1860,8 +1860,6 @@
 , 							{
 								"name" : "WTF",
 								"default" : 								{
-									"fontname" : [ "HydrogenType" ],
-									"bgcolor" : [ 0.163647, 0.174699, 0.17409, 1.0 ],
 									"patchlinecolor" : [ 0.231373, 0.121569, 0.305882, 0.9 ],
 									"bgfillcolor" : 									{
 										"type" : "gradient",
@@ -1873,10 +1871,12 @@
 										"autogradient" : 0
 									}
 ,
+									"bgcolor" : [ 0.163647, 0.174699, 0.17409, 1.0 ],
 									"accentcolor" : [ 0.50764, 0.065317, 0.112129, 1.0 ],
-									"color" : [ 0.113725, 0.580392, 0.737255, 1.0 ],
 									"fontsize" : [ 18.0 ],
-									"elementcolor" : [ 0.461105, 0.492646, 0.591878, 1.0 ]
+									"elementcolor" : [ 0.461105, 0.492646, 0.591878, 1.0 ],
+									"color" : [ 0.113725, 0.580392, 0.737255, 1.0 ],
+									"fontname" : [ "HydrogenType" ]
 								}
 ,
 								"parentstyle" : "",
@@ -1885,12 +1885,12 @@
 , 							{
 								"name" : "a.ke",
 								"default" : 								{
-									"fontname" : [ "Andale Mono" ],
-									"selectioncolor" : [ 0.960784, 0.827451, 0.156863, 1.0 ],
-									"bgcolor" : [ 0.65098, 0.666667, 0.662745, 1.0 ],
 									"patchlinecolor" : [ 0.960784, 0.827451, 0.156863, 0.9 ],
 									"fontface" : [ 0 ],
-									"accentcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
+									"bgcolor" : [ 0.65098, 0.666667, 0.662745, 1.0 ],
+									"accentcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ],
+									"fontname" : [ "Andale Mono" ],
+									"selectioncolor" : [ 0.960784, 0.827451, 0.156863, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -1899,9 +1899,6 @@
 , 							{
 								"name" : "classic",
 								"default" : 								{
-									"fontname" : [ "Geneva" ],
-									"textcolor_inverse" : [ 0.0, 0.0, 0.0, 1.0 ],
-									"bgcolor" : [ 0.83978, 0.839941, 0.839753, 1.0 ],
 									"patchlinecolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 									"bgfillcolor" : 									{
 										"type" : "color",
@@ -1912,9 +1909,12 @@
 										"proportion" : 0.39
 									}
 ,
+									"bgcolor" : [ 0.83978, 0.839941, 0.839753, 1.0 ],
 									"accentcolor" : [ 0.498039, 0.498039, 0.498039, 1.0 ],
+									"fontsize" : [ 9.0 ],
 									"color" : [ 0.498039, 0.498039, 0.498039, 1.0 ],
-									"fontsize" : [ 9.0 ]
+									"fontname" : [ "Geneva" ],
+									"textcolor_inverse" : [ 0.0, 0.0, 0.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -1968,10 +1968,10 @@
 , 							{
 								"name" : "classicKslider",
 								"default" : 								{
-									"selectioncolor" : [ 0.498039, 0.498039, 0.498039, 1.0 ],
 									"bgcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
+									"elementcolor" : [ 0.498039, 0.498039, 0.498039, 1.0 ],
 									"color" : [ 1.0, 1.0, 1.0, 1.0 ],
-									"elementcolor" : [ 0.498039, 0.498039, 0.498039, 1.0 ]
+									"selectioncolor" : [ 0.498039, 0.498039, 0.498039, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -1980,8 +1980,8 @@
 , 							{
 								"name" : "classicLed",
 								"default" : 								{
-									"color" : [ 1.0, 0.0, 0.0, 1.0 ],
-									"elementcolor" : [ 0.6, 0.0, 0.0, 1.0 ]
+									"elementcolor" : [ 0.6, 0.0, 0.0, 1.0 ],
+									"color" : [ 1.0, 0.0, 0.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -2009,9 +2009,9 @@
 , 							{
 								"name" : "classicNodes",
 								"default" : 								{
-									"color" : [ 0.839216, 0.839216, 0.839216, 1.0 ],
 									"fontsize" : [ 9.0 ],
-									"elementcolor" : [ 0.498039, 0.498039, 0.498039, 1.0 ]
+									"elementcolor" : [ 0.498039, 0.498039, 0.498039, 1.0 ],
+									"color" : [ 0.839216, 0.839216, 0.839216, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -2066,8 +2066,8 @@
 , 							{
 								"name" : "classicTab",
 								"default" : 								{
-									"color" : [ 0.498039, 0.498039, 0.498039, 1.0 ],
-									"elementcolor" : [ 0.839216, 0.839216, 0.839216, 1.0 ]
+									"elementcolor" : [ 0.839216, 0.839216, 0.839216, 1.0 ],
+									"color" : [ 0.498039, 0.498039, 0.498039, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -2086,8 +2086,8 @@
 , 							{
 								"name" : "classicToggle",
 								"default" : 								{
-									"color" : [ 0.380392, 0.380392, 0.380392, 1.0 ],
-									"elementcolor" : [ 0.376471, 0.384314, 0.4, 0.0 ]
+									"elementcolor" : [ 0.376471, 0.384314, 0.4, 0.0 ],
+									"color" : [ 0.380392, 0.380392, 0.380392, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -2105,8 +2105,8 @@
 , 							{
 								"name" : "classicWaveform~",
 								"default" : 								{
-									"selectioncolor" : [ 0.498039, 0.498039, 0.498039, 0.5 ],
-									"color" : [ 0.380392, 0.380392, 0.380392, 1.0 ]
+									"color" : [ 0.380392, 0.380392, 0.380392, 1.0 ],
+									"selectioncolor" : [ 0.498039, 0.498039, 0.498039, 0.5 ]
 								}
 ,
 								"parentstyle" : "",
@@ -2135,9 +2135,6 @@
 , 							{
 								"name" : "irv",
 								"default" : 								{
-									"fontname" : [ "Arial Bold" ],
-									"textcolor_inverse" : [ 0.0, 0.0, 0.0, 1.0 ],
-									"bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 									"patchlinecolor" : [ 0.0, 0.0, 0.0, 0.9 ],
 									"bgfillcolor" : 									{
 										"type" : "gradient",
@@ -2149,9 +2146,12 @@
 										"autogradient" : 0
 									}
 ,
+									"bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 									"accentcolor" : [ 0.65098, 0.666667, 0.662745, 1.0 ],
+									"fontsize" : [ 10.0 ],
 									"color" : [ 0.941176, 0.690196, 0.196078, 1.0 ],
-									"fontsize" : [ 10.0 ]
+									"fontname" : [ "Arial Bold" ],
+									"textcolor_inverse" : [ 0.0, 0.0, 0.0, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -2165,8 +2165,6 @@
 , 							{
 								"name" : "jpatcher002",
 								"default" : 								{
-									"fontname" : [ "Ableton Sans Book" ],
-									"clearcolor" : [ 0.32549, 0.345098, 0.372549, 0.0 ],
 									"patchlinecolor" : [ 0.65098, 0.65098, 0.65098, 0.0 ],
 									"bgfillcolor" : 									{
 										"type" : "color",
@@ -2177,7 +2175,9 @@
 										"proportion" : 0.39
 									}
 ,
-									"fontsize" : [ 9.5 ]
+									"fontsize" : [ 9.5 ],
+									"fontname" : [ "Ableton Sans Book" ],
+									"clearcolor" : [ 0.32549, 0.345098, 0.372549, 0.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -2186,9 +2186,6 @@
 , 							{
 								"name" : "jpink",
 								"default" : 								{
-									"clearcolor" : [ 0.113725, 0.607843, 0.607843, 1.0 ],
-									"selectioncolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
-									"bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 									"patchlinecolor" : [ 0.65, 0.65, 0.65, 1.0 ],
 									"bgfillcolor" : 									{
 										"type" : "color",
@@ -2201,9 +2198,12 @@
 									}
 ,
 									"textcolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
+									"bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 									"accentcolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
+									"elementcolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
 									"color" : [ 0.619608, 0.0, 0.360784, 1.0 ],
-									"elementcolor" : [ 0.619608, 0.0, 0.360784, 1.0 ]
+									"clearcolor" : [ 0.113725, 0.607843, 0.607843, 1.0 ],
+									"selectioncolor" : [ 0.619608, 0.0, 0.360784, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -2305,8 +2305,8 @@
 , 							{
 								"name" : "purple",
 								"default" : 								{
-									"textcolor_inverse" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-									"bgcolor" : [ 0.304029, 0.250694, 0.285628, 1.0 ]
+									"bgcolor" : [ 0.304029, 0.250694, 0.285628, 1.0 ],
+									"textcolor_inverse" : [ 0.701961, 0.415686, 0.886275, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -2363,8 +2363,8 @@
 								"name" : "tastefultoggle",
 								"default" : 								{
 									"bgcolor" : [ 0.287863, 0.333333, 0.329398, 1.0 ],
-									"color" : [ 0.941176, 0.690196, 0.196078, 1.0 ],
-									"elementcolor" : [ 0.654902, 0.572549, 0.376471, 1.0 ]
+									"elementcolor" : [ 0.654902, 0.572549, 0.376471, 1.0 ],
+									"color" : [ 0.941176, 0.690196, 0.196078, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -2383,11 +2383,11 @@
 , 							{
 								"name" : "whitey",
 								"default" : 								{
+									"patchlinecolor" : [ 0.199068, 0.062496, 0.060031, 0.9 ],
+									"fontsize" : [ 36.0 ],
 									"fontname" : [ "Dirty Ego" ],
 									"selectioncolor" : [ 0.011765, 0.396078, 0.752941, 1.0 ],
-									"textcolor_inverse" : [ 0.65098, 0.666667, 0.662745, 1.0 ],
-									"patchlinecolor" : [ 0.199068, 0.062496, 0.060031, 0.9 ],
-									"fontsize" : [ 36.0 ]
+									"textcolor_inverse" : [ 0.65098, 0.666667, 0.662745, 1.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -2421,13 +2421,13 @@
 					"patching_rect" : [ 208.0, 203.0, 55.0, 48.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
-							"parameter_shortname" : "Slew Time",
-							"parameter_type" : 0,
-							"parameter_unitstyle" : 9,
 							"parameter_units" : "s",
 							"parameter_exponent" : 3.33,
 							"parameter_longname" : "live.dial",
-							"parameter_mmax" : 60.0
+							"parameter_mmax" : 60.0,
+							"parameter_shortname" : "Slew Time",
+							"parameter_type" : 0,
+							"parameter_unitstyle" : 9
 						}
 
 					}
@@ -2447,13 +2447,13 @@
 					"patching_rect" : [ 43.0, 203.0, 58.0, 48.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
-							"parameter_shortname" : "Voltage",
-							"parameter_type" : 0,
-							"parameter_unitstyle" : 9,
 							"parameter_units" : "%.2fV",
 							"parameter_mmin" : -5.0,
 							"parameter_longname" : "live.dial[3]",
-							"parameter_mmax" : 10.0
+							"parameter_mmax" : 10.0,
+							"parameter_shortname" : "Voltage",
+							"parameter_type" : 0,
+							"parameter_unitstyle" : 9
 						}
 
 					}
@@ -2712,28 +2712,28 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-21::obj-71" : [ "live.dial[11]", "Slew Time", 0 ],
+			"obj-21::obj-3" : [ "live.text", "live.text", 0 ],
+			"obj-21::obj-78" : [ "live.dial[13]", "Voltage", 0 ],
 			"obj-21::obj-76" : [ "live.dial[22]", "Voltage", 0 ],
+			"obj-27" : [ "live.text[1]", "live.text[1]", 0 ],
+			"obj-21::obj-72" : [ "live.dial[17]", "Voltage", 0 ],
+			"obj-21::obj-73" : [ "live.dial[21]", "Slew Time", 0 ],
+			"obj-21::obj-71" : [ "live.dial[11]", "Slew Time", 0 ],
+			"obj-21::obj-77" : [ "live.dial[23]", "Slew Time", 0 ],
+			"obj-21::obj-87" : [ "live.step", "live.step", 0 ],
+			"obj-21::obj-84" : [ "live.dial[26]", "Voltage", 0 ],
+			"obj-21::obj-85" : [ "live.dial[27]", "Slew Time", 0 ],
+			"obj-21::obj-82" : [ "live.dial[25]", "Voltage", 0 ],
+			"obj-18" : [ "live.dial", "Slew Time", 0 ],
+			"obj-46" : [ "live.dial[3]", "Voltage", 0 ],
 			"obj-21::obj-74" : [ "live.dial[12]", "Voltage", 0 ],
+			"obj-21::obj-75" : [ "live.dial[18]", "Slew Time", 0 ],
+			"obj-14" : [ "live.tab", "live.tab", 0 ],
+			"obj-21::obj-86" : [ "live.dial[15]", "Voltage", 0 ],
+			"obj-21::obj-68" : [ "live.dial[19]", "Slew Time", 0 ],
+			"obj-21::obj-83" : [ "live.dial[14]", "Slew Time", 0 ],
 			"obj-21::obj-69" : [ "live.dial[20]", "Voltage", 0 ],
 			"obj-21::obj-81" : [ "live.dial[24]", "Slew Time", 0 ],
-			"obj-21::obj-82" : [ "live.dial[25]", "Voltage", 0 ],
-			"obj-21::obj-83" : [ "live.dial[14]", "Slew Time", 0 ],
-			"obj-21::obj-3" : [ "live.text", "live.text", 0 ],
-			"obj-21::obj-84" : [ "live.dial[26]", "Voltage", 0 ],
-			"obj-18" : [ "live.dial", "Slew Time", 0 ],
-			"obj-21::obj-75" : [ "live.dial[18]", "Slew Time", 0 ],
-			"obj-21::obj-87" : [ "live.step", "live.step", 0 ],
-			"obj-21::obj-68" : [ "live.dial[19]", "Slew Time", 0 ],
-			"obj-21::obj-73" : [ "live.dial[21]", "Slew Time", 0 ],
-			"obj-27" : [ "live.text[1]", "live.text[1]", 0 ],
-			"obj-21::obj-77" : [ "live.dial[23]", "Slew Time", 0 ],
-			"obj-46" : [ "live.dial[3]", "Voltage", 0 ],
-			"obj-21::obj-78" : [ "live.dial[13]", "Voltage", 0 ],
-			"obj-14" : [ "live.tab", "live.tab", 0 ],
-			"obj-21::obj-72" : [ "live.dial[17]", "Voltage", 0 ],
-			"obj-21::obj-85" : [ "live.dial[27]", "Slew Time", 0 ],
-			"obj-21::obj-86" : [ "live.dial[15]", "Voltage", 0 ],
 			"parameterbanks" : 			{
 
 			}
@@ -2797,10 +2797,6 @@
 , 			{
 				"name" : "Luca",
 				"default" : 				{
-					"fontname" : [ "Open Sans Semibold" ],
-					"selectioncolor" : [ 0.720698, 0.16723, 0.080014, 1.0 ],
-					"textcolor_inverse" : [ 0.239216, 0.254902, 0.278431, 1.0 ],
-					"bgcolor" : [ 0.904179, 0.895477, 0.842975, 0.56 ],
 					"bgfillcolor" : 					{
 						"type" : "gradient",
 						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -2811,9 +2807,13 @@
 						"autogradient" : 0
 					}
 ,
+					"bgcolor" : [ 0.904179, 0.895477, 0.842975, 0.56 ],
 					"accentcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ],
+					"elementcolor" : [ 0.786675, 0.801885, 0.845022, 1.0 ],
 					"color" : [ 0.475135, 0.293895, 0.251069, 1.0 ],
-					"elementcolor" : [ 0.786675, 0.801885, 0.845022, 1.0 ]
+					"fontname" : [ "Open Sans Semibold" ],
+					"selectioncolor" : [ 0.720698, 0.16723, 0.080014, 1.0 ],
+					"textcolor_inverse" : [ 0.239216, 0.254902, 0.278431, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -2832,9 +2832,6 @@
 , 			{
 				"name" : "Transparent",
 				"default" : 				{
-					"fontname" : [ "Rubik" ],
-					"textcolor_inverse" : [ 0.0, 0.0, 0.0, 1.0 ],
-					"bgcolor" : [ 0.290196, 0.309804, 0.301961, 0.35 ],
 					"bgfillcolor" : 					{
 						"type" : "gradient",
 						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -2846,11 +2843,14 @@
 					}
 ,
 					"textcolor" : [ 0.239216, 0.254902, 0.278431, 1.0 ],
+					"bgcolor" : [ 0.290196, 0.309804, 0.301961, 0.35 ],
 					"accentcolor" : [ 0.239216, 0.254902, 0.278431, 1.0 ],
-					"color" : [ 0.904179, 0.895477, 0.842975, 0.74 ],
 					"fontsize" : [ 12.0 ],
-					"textjustification" : [ 1 ],
-					"elementcolor" : [ 0.0, 0.0, 0.0, 1.0 ]
+					"elementcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
+					"color" : [ 0.904179, 0.895477, 0.842975, 0.74 ],
+					"fontname" : [ "Rubik" ],
+					"textcolor_inverse" : [ 0.0, 0.0, 0.0, 1.0 ],
+					"textjustification" : [ 1 ]
 				}
 ,
 				"parentstyle" : "",
@@ -2859,8 +2859,6 @@
 , 			{
 				"name" : "WTF",
 				"default" : 				{
-					"fontname" : [ "HydrogenType" ],
-					"bgcolor" : [ 0.163647, 0.174699, 0.17409, 1.0 ],
 					"patchlinecolor" : [ 0.231373, 0.121569, 0.305882, 0.9 ],
 					"bgfillcolor" : 					{
 						"type" : "gradient",
@@ -2872,10 +2870,12 @@
 						"autogradient" : 0
 					}
 ,
+					"bgcolor" : [ 0.163647, 0.174699, 0.17409, 1.0 ],
 					"accentcolor" : [ 0.50764, 0.065317, 0.112129, 1.0 ],
-					"color" : [ 0.113725, 0.580392, 0.737255, 1.0 ],
 					"fontsize" : [ 18.0 ],
-					"elementcolor" : [ 0.461105, 0.492646, 0.591878, 1.0 ]
+					"elementcolor" : [ 0.461105, 0.492646, 0.591878, 1.0 ],
+					"color" : [ 0.113725, 0.580392, 0.737255, 1.0 ],
+					"fontname" : [ "HydrogenType" ]
 				}
 ,
 				"parentstyle" : "",
@@ -2884,12 +2884,12 @@
 , 			{
 				"name" : "a.ke",
 				"default" : 				{
-					"fontname" : [ "Andale Mono" ],
-					"selectioncolor" : [ 0.960784, 0.827451, 0.156863, 1.0 ],
-					"bgcolor" : [ 0.65098, 0.666667, 0.662745, 1.0 ],
 					"patchlinecolor" : [ 0.960784, 0.827451, 0.156863, 0.9 ],
 					"fontface" : [ 0 ],
-					"accentcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ]
+					"bgcolor" : [ 0.65098, 0.666667, 0.662745, 1.0 ],
+					"accentcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ],
+					"fontname" : [ "Andale Mono" ],
+					"selectioncolor" : [ 0.960784, 0.827451, 0.156863, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -2898,9 +2898,6 @@
 , 			{
 				"name" : "classic",
 				"default" : 				{
-					"fontname" : [ "Geneva" ],
-					"textcolor_inverse" : [ 0.0, 0.0, 0.0, 1.0 ],
-					"bgcolor" : [ 0.83978, 0.839941, 0.839753, 1.0 ],
 					"patchlinecolor" : [ 0.0, 0.0, 0.0, 1.0 ],
 					"bgfillcolor" : 					{
 						"type" : "color",
@@ -2911,9 +2908,12 @@
 						"proportion" : 0.39
 					}
 ,
+					"bgcolor" : [ 0.83978, 0.839941, 0.839753, 1.0 ],
 					"accentcolor" : [ 0.498039, 0.498039, 0.498039, 1.0 ],
+					"fontsize" : [ 9.0 ],
 					"color" : [ 0.498039, 0.498039, 0.498039, 1.0 ],
-					"fontsize" : [ 9.0 ]
+					"fontname" : [ "Geneva" ],
+					"textcolor_inverse" : [ 0.0, 0.0, 0.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -2967,10 +2967,10 @@
 , 			{
 				"name" : "classicKslider",
 				"default" : 				{
-					"selectioncolor" : [ 0.498039, 0.498039, 0.498039, 1.0 ],
 					"bgcolor" : [ 0.0, 0.0, 0.0, 1.0 ],
+					"elementcolor" : [ 0.498039, 0.498039, 0.498039, 1.0 ],
 					"color" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"elementcolor" : [ 0.498039, 0.498039, 0.498039, 1.0 ]
+					"selectioncolor" : [ 0.498039, 0.498039, 0.498039, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -2979,8 +2979,8 @@
 , 			{
 				"name" : "classicLed",
 				"default" : 				{
-					"color" : [ 1.0, 0.0, 0.0, 1.0 ],
-					"elementcolor" : [ 0.6, 0.0, 0.0, 1.0 ]
+					"elementcolor" : [ 0.6, 0.0, 0.0, 1.0 ],
+					"color" : [ 1.0, 0.0, 0.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -3008,9 +3008,9 @@
 , 			{
 				"name" : "classicNodes",
 				"default" : 				{
-					"color" : [ 0.839216, 0.839216, 0.839216, 1.0 ],
 					"fontsize" : [ 9.0 ],
-					"elementcolor" : [ 0.498039, 0.498039, 0.498039, 1.0 ]
+					"elementcolor" : [ 0.498039, 0.498039, 0.498039, 1.0 ],
+					"color" : [ 0.839216, 0.839216, 0.839216, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -3065,8 +3065,8 @@
 , 			{
 				"name" : "classicTab",
 				"default" : 				{
-					"color" : [ 0.498039, 0.498039, 0.498039, 1.0 ],
-					"elementcolor" : [ 0.839216, 0.839216, 0.839216, 1.0 ]
+					"elementcolor" : [ 0.839216, 0.839216, 0.839216, 1.0 ],
+					"color" : [ 0.498039, 0.498039, 0.498039, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -3085,8 +3085,8 @@
 , 			{
 				"name" : "classicToggle",
 				"default" : 				{
-					"color" : [ 0.380392, 0.380392, 0.380392, 1.0 ],
-					"elementcolor" : [ 0.376471, 0.384314, 0.4, 0.0 ]
+					"elementcolor" : [ 0.376471, 0.384314, 0.4, 0.0 ],
+					"color" : [ 0.380392, 0.380392, 0.380392, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -3104,8 +3104,8 @@
 , 			{
 				"name" : "classicWaveform~",
 				"default" : 				{
-					"selectioncolor" : [ 0.498039, 0.498039, 0.498039, 0.5 ],
-					"color" : [ 0.380392, 0.380392, 0.380392, 1.0 ]
+					"color" : [ 0.380392, 0.380392, 0.380392, 1.0 ],
+					"selectioncolor" : [ 0.498039, 0.498039, 0.498039, 0.5 ]
 				}
 ,
 				"parentstyle" : "",
@@ -3134,9 +3134,6 @@
 , 			{
 				"name" : "irv",
 				"default" : 				{
-					"fontname" : [ "Arial Bold" ],
-					"textcolor_inverse" : [ 0.0, 0.0, 0.0, 1.0 ],
-					"bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 					"patchlinecolor" : [ 0.0, 0.0, 0.0, 0.9 ],
 					"bgfillcolor" : 					{
 						"type" : "gradient",
@@ -3148,9 +3145,12 @@
 						"autogradient" : 0
 					}
 ,
+					"bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 					"accentcolor" : [ 0.65098, 0.666667, 0.662745, 1.0 ],
+					"fontsize" : [ 10.0 ],
 					"color" : [ 0.941176, 0.690196, 0.196078, 1.0 ],
-					"fontsize" : [ 10.0 ]
+					"fontname" : [ "Arial Bold" ],
+					"textcolor_inverse" : [ 0.0, 0.0, 0.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -3164,8 +3164,6 @@
 , 			{
 				"name" : "jpatcher002",
 				"default" : 				{
-					"fontname" : [ "Ableton Sans Book" ],
-					"clearcolor" : [ 0.32549, 0.345098, 0.372549, 0.0 ],
 					"patchlinecolor" : [ 0.65098, 0.65098, 0.65098, 0.0 ],
 					"bgfillcolor" : 					{
 						"type" : "color",
@@ -3176,7 +3174,9 @@
 						"proportion" : 0.39
 					}
 ,
-					"fontsize" : [ 9.5 ]
+					"fontsize" : [ 9.5 ],
+					"fontname" : [ "Ableton Sans Book" ],
+					"clearcolor" : [ 0.32549, 0.345098, 0.372549, 0.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -3185,9 +3185,6 @@
 , 			{
 				"name" : "jpink",
 				"default" : 				{
-					"clearcolor" : [ 0.113725, 0.607843, 0.607843, 1.0 ],
-					"selectioncolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
-					"bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 					"patchlinecolor" : [ 0.65, 0.65, 0.65, 1.0 ],
 					"bgfillcolor" : 					{
 						"type" : "color",
@@ -3200,9 +3197,12 @@
 					}
 ,
 					"textcolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
+					"bgcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 					"accentcolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
+					"elementcolor" : [ 0.619608, 0.0, 0.360784, 1.0 ],
 					"color" : [ 0.619608, 0.0, 0.360784, 1.0 ],
-					"elementcolor" : [ 0.619608, 0.0, 0.360784, 1.0 ]
+					"clearcolor" : [ 0.113725, 0.607843, 0.607843, 1.0 ],
+					"selectioncolor" : [ 0.619608, 0.0, 0.360784, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -3304,8 +3304,8 @@
 , 			{
 				"name" : "purple",
 				"default" : 				{
-					"textcolor_inverse" : [ 0.701961, 0.415686, 0.886275, 1.0 ],
-					"bgcolor" : [ 0.304029, 0.250694, 0.285628, 1.0 ]
+					"bgcolor" : [ 0.304029, 0.250694, 0.285628, 1.0 ],
+					"textcolor_inverse" : [ 0.701961, 0.415686, 0.886275, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -3362,8 +3362,8 @@
 				"name" : "tastefultoggle",
 				"default" : 				{
 					"bgcolor" : [ 0.287863, 0.333333, 0.329398, 1.0 ],
-					"color" : [ 0.941176, 0.690196, 0.196078, 1.0 ],
-					"elementcolor" : [ 0.654902, 0.572549, 0.376471, 1.0 ]
+					"elementcolor" : [ 0.654902, 0.572549, 0.376471, 1.0 ],
+					"color" : [ 0.941176, 0.690196, 0.196078, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -3382,11 +3382,11 @@
 , 			{
 				"name" : "whitey",
 				"default" : 				{
+					"patchlinecolor" : [ 0.199068, 0.062496, 0.060031, 0.9 ],
+					"fontsize" : [ 36.0 ],
 					"fontname" : [ "Dirty Ego" ],
 					"selectioncolor" : [ 0.011765, 0.396078, 0.752941, 1.0 ],
-					"textcolor_inverse" : [ 0.65098, 0.666667, 0.662745, 1.0 ],
-					"patchlinecolor" : [ 0.199068, 0.062496, 0.060031, 0.9 ],
-					"fontsize" : [ 36.0 ]
+					"textcolor_inverse" : [ 0.65098, 0.666667, 0.662745, 1.0 ]
 				}
 ,
 				"parentstyle" : "",

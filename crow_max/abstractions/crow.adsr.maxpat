@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 26.0, 85.0, 1852.0, 969.0 ],
+		"rect" : [ 42.0, 85.0, 1261.0, 969.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -86,7 +86,7 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "float sets release (s)",
+					"comment" : "release (s)",
 					"cool" : 1,
 					"id" : "obj-98",
 					"index" : 0,
@@ -100,7 +100,7 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "float sets sustain (volts)",
+					"comment" : "sustain (volts)",
 					"cool" : 1,
 					"id" : "obj-97",
 					"index" : 0,
@@ -114,7 +114,7 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "float sets decay (s)",
+					"comment" : "decay (s)",
 					"cool" : 1,
 					"id" : "obj-96",
 					"index" : 0,
@@ -128,7 +128,7 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "float sets peak (volts)",
+					"comment" : "peak (volts)",
 					"cool" : 1,
 					"id" : "obj-95",
 					"index" : 0,
@@ -142,7 +142,7 @@
 			}
 , 			{
 				"box" : 				{
-					"comment" : "float sets attack (s)",
+					"comment" : "attack (s)",
 					"cool" : 1,
 					"id" : "obj-94",
 					"index" : 0,

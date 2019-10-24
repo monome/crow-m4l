@@ -167,10 +167,14 @@
 
 	<!--SEEALSO-->
 	<seealsolist>
-		<seealso name="crow.lfo"/>
 		<seealso name="crow.volts"/>
-		<seealso name="crow.pulse"/>
+		<seealso name="crow.var"/>
+		<seealso name="crow.function"/>
+		<seealso name="crow.makefunction"/>
+		<seealso name="crow.adsr"/>
+		<seealso name="crow.ar"/>
 		<seealso name="crow.n2v"/>	
+		<seealso name="crow.inputs"/>	
 	</seealsolist>
 
 	

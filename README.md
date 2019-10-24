@@ -58,12 +58,29 @@ There is also a series of [video walkthroughs](https://youtu.be/TaEGzWsFVQc) ava
 
 nb. the m4l devices that follow will not connect to crow unless `^^command_center` is properly initialized.
 
-nb. (pt 2) currently only one crow is addressable at a time. Multi-crow support will be added in the future.
-
 - a *connector* between crow and Live
+- a *router* for messages from Live to crow
 - load onto any MIDI track
 - select your connected crow device from the dropdown
-- don't see your crow? hit 'refresh'
+- don't see your crow? hit [refresh]
+
+#### many crow? each needs an address
+
+*nb. If you are NOT connecting more than one crow to Live, you do not need to perform the actions outlined in this section. They do not apply to (or even help) a single-crow configuration.*
+
+If you'd like to connect more than one physical crow module to the m4l devices, you'll need to instantiate a unique `^^command_center` for each crow and give it a Live address. You'll also have to tell the other m4l devices to which address they should send messages. Don't worry, these addresses will all save with your Live Set.
+
+Every `^^command_center` defaults to address **1**. To make sure messages from the m4l devices get to the right crow, toggle from [setup] to [address] and you'll be able to change `^^command_center`'s address.
+
+So, a typical two-crow setup would require:
+
+- each crow connected to your computer through USB
+- instantiate two `^^command_center` devices
+- use the dropdown on the [setup] page to connect each `^^command_center` to a different crow
+- toggle to [address] and make sure that one `^^command_center` has address **1** and the other has address **2**
+- on each of the following m4l devices, toggle [address] to direct the flow of traffic from the device back to the right `^^command_center`. eg: if I want to use `^^dual` with crow **2**, I would have to specify **2** as `^^dual`'s address:
+
+![command-center](/images/m4l_address_example.png)
 
 ---
 
@@ -119,19 +136,12 @@ nb. (pt 2) currently only one crow is addressable at a time. Multi-crow support 
 an i2c output device to play a connected Just Friends module as a 6-voice polyphonic synth through Live
 
 - as always, you must first choose a crow device with the ^^command_center
-
 - ^^jf_synth requires Just Friends (Whimsical Raps) to be connected to crow via i2c cable or through powered-bus
-
 - load onto any MIDI track + either arm it for record or set the monitoring to "in"
-
 - if crow is NOT connected to an i2c powered-bus (ie, if it's just connected directly to Just Friends via an i2c cable with no Teletpe/TXb/powered-bus in between), toggle 'enable pullups' on the m4l interface
-
 - on your Just Friends module's panel, engage 'sound' and 'transient'
-
-- on the m4l device, engage the big toggle in the middle-bottom to connect to Just Friends
-
+- on the m4l device, engage the second toggle to connect to Just Friends
 - you will see the 6 lights blink on Just Friends
-
 - you should now be able to play Just Friends through MIDI!
 
 ---
@@ -215,7 +225,6 @@ This device gives you access to crow's Lua [read-eval-print loop](https://en.wik
 Use this device to translate multiple mappable knobs in ableton into data for crow; the primary use case is taking remote control over variables in a script that crow is currently running.
 
 - as always, you must first choose a crow device with the ^^command_center
-
 - load onto any MIDI track
 - use the yellow-bordered box to type in a name matching a variable in your script; the corresponding knob will now act as a remote control for that variable
 - press enter to confirm your selection.

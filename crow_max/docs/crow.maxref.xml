@@ -109,7 +109,16 @@
 			<arglist>
 			</arglist>
 			<digest>
-				^^e or ^^endscript: buffered code will be error-checked, eval'd, and written to flash. crow returns to repl mode.
+				^^e or ^^endscript: buffered code will be error-checked, eval'd, and run. crow returns to repl mode.
+			</digest>
+			<description>
+			</description>
+		</method>
+		<method name="^^w">
+			<arglist>
+			</arglist>
+			<digest>
+				^^w or ^^endscript: buffered code will be error-checked, eval'd, and written to flash memory. crow returns to repl mode.
 			</digest>
 			<description>
 			</description>
@@ -158,6 +167,14 @@
 
 	<!--SEEALSO-->
 	<seealsolist>
+		<seealso name="crow.volts"/>
+		<seealso name="crow.var"/>
+		<seealso name="crow.function"/>
+		<seealso name="crow.makefunction"/>
+		<seealso name="crow.adsr"/>
+		<seealso name="crow.ar"/>
+		<seealso name="crow.n2v"/>	
+		<seealso name="crow.inputs"/>	
 	</seealsolist>
 
 	

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml-stylesheet href="./c74ref.xsl" type="text/xsl"?>
+
+<c74object name="crow.var" module="crow">
+
+	<digest>
+		Assign values to a variable on the crow.
+	</digest>
+
+	<description>
+		Specify a variable to address as <o>crow.var</o>'s first argument.  Connect the output of <o>crow.var</o> to the input of the <o>crow</o> object.  Values sent to <o>crow.var</o> will be sent to the crow eurorack module and stored in the specified variable.  
+	</description>
+
+	<!--METADATA-->
+	<metadatalist>
+		<metadata name="author">Sam Wolk</metadata>
+		<metadata name="tag">crow</metadata>
+		<metadata name="tag">crow help</metadata>
+		<metadata name="tag">Eurorack</metadata>
+	</metadatalist>
+
+	<!--ARGUMENTS-->
+	<objarglist>
+		<objarg name="variable" optional="1" type="symbol">
+            <digest>
+				Name of variable to address
+			</digest>
+			<description>
+				Values sent to <o>crow.var</o>'s left inlet will be sent to crow and stored in this variable.
+			</description>
+        </objarg>
+	</objarglist>
+
+	<!--MESSAGES-->
+	<methodlist>
+		<method name="int">
+            <arglist>
+                <arg name="value" optional="0" type="int" />
+            </arglist>
+            <digest>
+                Value to store
+            </digest>
+			<description>
+				An integer sent to the left inlet will be stored in the specified variable.
+			</description>
+        </method>
+		<method name="float">
+            <arglist>
+                <arg name="value" optional="0" type="float" />
+            </arglist>
+            <digest>
+                Value to store
+            </digest>
+			<description>
+				A float sent to the left inlet will be stored in the specified variable.
+			</description>
+        </method>
+		<method name="symbol">
+            <arglist>
+                <arg name="value" optional="0" type="symbol" />
+            </arglist>
+            <digest>
+                String to store
+            </digest>
+			<description>
+				A symbol sent to the left inlet will be converted to a string and stored in the specified variable.
+			</description>
+        </method>
+		<method name="var">
+            <arglist>
+                <arg name="variable-name" optional="0" type="symbol" />
+            </arglist>
+            <digest>
+                Store a variable in the the variable addressed by <o>crow.var</o>.
+            </digest>
+			<description>
+				The word <m>var</m> followed by a valid variable name stores the name of that variable in <o>crow.var</o>'s current variable.  For instance, if <o>crow.var</o> is set to <m>input[1].change</m>, then sending <m>var myFunction</m> to <o>crow.var</o>'s first inlet would be equivalent to executing the Lua code <m>input[1].change = myFunction</m>.
+			</description>
+        </method>
+		<method name="table">
+            <digest>
+                Overwrite the variable addressed by <o>crow.var</o> with an empty table.
+            </digest>
+			<description>
+				The word <m>table</m>, when sent to <o>crow.var</o>'s first inlet, will overwrite <o>crow.var</o>'s specified variable with an empty table (i.e. <m>myVar = { }</m>).
+			</description>
+        </method>
+		<method name="index">
+			<arglist>
+                <arg name="index" optional="0" type="int" />
+				<arg name="value" optional="0" type="symbol" />
+            </arglist>
+            <digest>
+                Assign a value to an integer index in the table specified by <o>crow.var</o>'s variable.
+            </digest>
+			<description>
+				The word <m>index</m> followed by an integer <m>index</m> and any <m>value</m>, when sent to <o>crow.var</o>'s first inlet, will write the value to the specified index in the table assigned to <o>crow.var</o>'s variable. 
+				For instance, if <o>crow.var</o> is set to <m>myTable</m>, then <m>index 6 2.4</m> is equivalent to the Lua chunk <m>myTable[6] = 2.4</m>. 
+				<br/><br/>NB: symbols are treated as variable names; symbols must be wrapped in single quotes to be treated as strings.
+			
+				
+				</description>
+        </method>
+		<method name="keyval">
+			<arglist>
+                <arg name="key" optional="0" type="symbol" />
+				<arg name="value" optional="0" type="symbol" />
+            </arglist>
+            <digest>
+                Assign a value to a key in the table specified by <o>crow.var</o>'s variable.
+            </digest>
+			<description>
+				The word <m>keyval</m> followed by a <m>key</m> and a <m>value</m>, when sent to <o>crow.var</o>'s first inlet, will write the value to the specified key in the table assigned to <o>crow.var</o>'s variable.
+				For instance, if <o>crow.var</o> is set to <m>myTable</m>, then <m>keyval someKey 2.4</m> is equivalent to the Lua chunk <m>myTable.someKey = 2.4</m>. 
+				 <br/><br/>NB: symbols are treated as variable names; symbols must be wrapped in single quotes to be treated as strings.
+			
+			</description>
+        </method>
+	</methodlist>
+
+	<!--DISCUSSION-->
+	<discussion>
+	</discussion>
+
+	<!--SEEALSO-->
+	<seealsolist>
+		<seealso name="crow"/>
+		<seealso name="crow.volts"/>
+		<seealso name="crow.function"/>
+		<seealso name="crow.inputs"/>
+		<seealso name="crow.adsr"/>
+		<seealso name="crow.ar"/>
+		<seealso name="crow.n2v"/>		
+	</seealsolist>
+
+	
+
+</c74object>

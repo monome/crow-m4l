@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml-stylesheet href="./c74ref.xsl" type="text/xsl"?>
+
+<c74object name="crow.function" module="crow">
+
+	<digest>
+		Execute a function defined on crow.
+	</digest>
+
+	<description>
+		<o>crow.function</o> can be used to execute any function defined on crow by connecting <o>crow.function</o>'s output to the <o>crow</o> object.  The right outlet will emit a string which can be passed as an input to other <o>crow.function</o> objects. 
+	</description>
+
+	<!--METADATA-->
+	<metadatalist>
+		<metadata name="author">Sam Wolk</metadata>
+		<metadata name="tag">crow</metadata>
+		<metadata name="tag">crow help</metadata>
+		<metadata name="tag">Eurorack</metadata>
+	</metadatalist>
+
+	<!--ARGUMENTS-->
+	<objarglist>
+		<objarg name="function" optional="0" type="symbol">
+            <digest>
+				Name of function to execute.
+			</digest>
+			<description>
+				Name of function to execute.  Function must already be defined on crow.
+			</description>
+        </objarg>
+	</objarglist>
+
+	<!--MESSAGES-->
+	<methodlist>
+		<method name="bang">
+			<arglist>
+				<arg name="input" optional="0" />
+			</arglist>
+			<digest>
+				Execute the function with no arguments. 
+			</digest>
+			<description>
+				A bang will execute the sepcified function with no arguments, e.g. <m>myFunction()</m>.
+			</description>
+		</method>
+		<method name="list">
+			<arglist>
+				<arg name="input" optional="0" type = "list" />
+			</arglist>
+			<digest>
+				Execute the function with arguments.
+			</digest>
+			<description>
+				Sending a list to the left inlet will execute the function with the list converted to its arguments. <br/><br/>
+				NB: symbols will be treated as variables.  Wrap a symbol in single quotes to turn it into a string.
+			</description>
+		</method>
+	</methodlist>
+
+	<!--DISCUSSION-->
+	<discussion>
+	</discussion>
+
+	<!--SEEALSO-->
+	<seealsolist>
+		<seealso name="crow"/>
+		<seealso name="crow.volts"/>
+		<seealso name="crow.makefunction"/>
+		<seealso name="crow.var"/>
+		<seealso name="crow.inputs"/>
+		<seealso name="crow.n2v"/>
+		<seealso name="crow.adsr"/>		
+		<seealso name="crow.ar"/>
+		
+	</seealsolist>
+
+	
+
+</c74object>

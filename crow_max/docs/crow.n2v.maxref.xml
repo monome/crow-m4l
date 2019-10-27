@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml-stylesheet href="./c74ref.xsl" type="text/xsl"?>
+
+<c74object name="crow.n2v" module="crow">
+
+	<digest>
+		Convert semitones/MIDI notes to voltage.
+	</digest>
+
+	<description>
+		Specify a root note which corresponds to 0V, then input a note in semitones and generate an output float which corresponds to a volt-per-octave voltage above the base of 0V.  Feed the output to <o>crow.volts</o> to convert pitch data in Max to V/oct CV for your modular synthesizer.
+	</description>
+
+	<!--METADATA-->
+	<metadatalist>
+		<metadata name="author">Sam Wolk</metadata>
+		<metadata name="tag">crow</metadata>
+		<metadata name="tag">crow help</metadata>
+		<metadata name="tag">Eurorack</metadata>
+	</metadatalist>
+
+	<!--ARGUMENTS-->
+	<objarglist>
+		<objarg name="root" optional="0" type="int">
+            <digest>
+				MIDI note # for 0V reference
+			</digest>
+			<description>
+				Specifies which MIDI note number will result in 0.0V output.  All other values will be determined based off that reference.  
+			</description>
+        </objarg>
+	</objarglist>
+
+	<!--MESSAGES-->
+	<methodlist>
+		<method name="int">
+			<arglist>
+				<arg name="input" optional="0" type="int" />
+			</arglist>
+			<digest>
+				convert semitones to a V/Oct voltage
+			</digest>
+			<description>
+				Convert a number in semitones to a voltage using the V/Oct tuning standard.  The root number specified as <o>crow.n2v</o>'s first argument will be subtracted from the incoming note first.
+			</description>
+		</method>
+		<method name="float">
+			<arglist>
+				<arg name="input" optional="0" type="float" />
+			</arglist>
+			<digest>
+				convert semitones and cents to a V/Oct voltage
+			</digest>
+			<description>
+				Convert a microtonal number in semitones and cents to a voltage using the V/Oct tuning standard. The root number specified as <o>crow.n2v</o>'s first argument will be subtracted from the incoming note first.
+			</description>
+		</method>
+	</methodlist>
+
+	<!--DISCUSSION-->
+	<discussion>
+	</discussion>
+
+	<!--SEEALSO-->
+	<seealsolist>
+		<seealso name="crow"/>
+		<seealso name="crow.volts"/>
+		<seealso name="crow.var"/>	
+		<seealso name="crow.function"/>	
+		<seealso name="crow.inputs"/>
+		<seealso name="crow.adsr"/>
+		<seealso name="crow.ar"/>
+		
+		
+	</seealsolist>
+
+	
+
+</c74object>

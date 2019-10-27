@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml-stylesheet href="./c74ref.xsl" type="text/xsl"?>
+
+<c74object name="crow.ar" module="crow">
+
+	<digest>
+		Trigger AR envelopes on crow
+	</digest>
+
+	<description>
+		Connect <o>crow.ar</o> to the <o>crow</o> Max object, then send bangs or messages to <o>crow.ar</o> to generate attack-release (AR) envelopes on the crow Eurorack module.
+	</description>
+
+	<!--METADATA-->
+	<metadatalist>
+		<metadata name="author">Sam Wolk</metadata>
+		<metadata name="tag">crow</metadata>
+		<metadata name="tag">crow help</metadata>
+		<metadata name="tag">Eurorack</metadata>
+	</metadatalist>
+
+	<!--ARGUMENTS-->
+	<objarglist>
+		<objarg name="output" optional="0" type="int">
+            <digest>
+				Hardware output index (1-4)
+			</digest>
+        </objarg>
+		<objarg name="attack" optional="1" type="float">
+            <digest>
+				Time in seconds
+			</digest>
+        </objarg>
+		<objarg name="release" optional="1" type="float">
+            <digest>
+				Time in seconds
+			</digest>
+        </objarg>
+		<objarg name="peak" optional="1" type="float">
+            <digest>
+				Amplitude of envelope (in volts)
+			</digest>
+        </objarg>
+	</objarglist>
+
+	<!--MESSAGES-->
+	<methodlist>
+		<method name="bang">
+             <digest>
+				Trigger an envelope.
+			</digest>
+			<description>
+				A bang sent to the first inlet will trigger an envelope.
+			</description>
+        </method>
+		<method name="float">
+			<arglist>
+				<arg name="input" optional="0" type="int" />
+			</arglist>
+			<digest>
+				Set peak level then trigger envelope.
+			</digest>
+			<description>
+				Sending a number to <o>crow.ar</o>'s first inlet will trigger an AR envelope with the peak-level set by the number.  The attack, release, and hardware output will use the same settings as the last generated envelope.
+			</description>
+		</method>
+		<method name="float">
+			<arglist>
+				<arg name="input" optional="0" type="float" />
+			</arglist>
+			<digest>
+				Set peak level then trigger envelope.
+			</digest>
+			<description>
+				Sending a number to <o>crow.ar</o>'s first inlet will trigger an AR envelope with the peak-level set by the number.  The attack, release, and hardware output will be the same as the last generated envelope.
+			</description>
+		</method>
+		<method name="attack">
+			<arglist>
+				<arg name="input" optional="0" type="float" />
+			</arglist>
+			<digest>
+				Set attack time then trigger envelope.
+			</digest>
+			<description>
+				Sending the word <m>attack</m> followed by a number to <o>crow.ar</o>'s first inlet will trigger an AR envelope with the attack time set by the number.  The peak-level, release time, and hardware output will be the same as the last generated envelope.
+			</description>
+		</method>
+		<method name="release">
+			<arglist>
+				<arg name="input" optional="0" type="float" />
+			</arglist>
+			<digest>
+				Set release time then trigger envelope.
+			</digest>
+			<description>
+				Sending the word <m>release</m> followed by a number to <o>crow.ar</o>'s first inlet will trigger an AR envelope with the release time set by the number.  The peak-level, attack time, and hardware output will be the same as the last generated envelope.
+			</description>
+		</method>
+		<method name="channel">
+			<arglist>
+				<arg name="input" optional="0" type="int" />
+			</arglist>
+			<digest>
+				Hardware output index (1-4)
+			</digest>
+			<description>
+				Sending the word <m>channel</m> followed by an index (1-4) to <o>crow.ar</o>'s first inlet will trigger an AR envelope on crow's specified hardware output.  The attack time, release time, and peak level be the same as the last generated envelope.
+			</description>
+		</method>
+	</methodlist>
+
+	<!--DISCUSSION-->
+	<discussion>
+	</discussion>
+
+	<!--SEEALSO-->
+	<seealsolist>
+		<seealso name="crow"/>
+		<seealso name="crow.var"/>
+		<seealso name="crow.function"/>
+		<seealso name="crow.inputs"/>
+		<seealso name="crow.adsr"/>
+		<seealso name="crow.n2v"/>	
+		<seealso name="crow.inputs"/>
+
+	</seealsolist>
+
+	
+
+</c74object>

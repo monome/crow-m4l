@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml-stylesheet href="./c74ref.xsl" type="text/xsl"?>
+
+<c74object name="crow.adsr" module="crow">
+
+	<digest>
+		Activate an ADSR envelope on crow.
+	</digest>
+
+	<description>
+		<o>crow.adsr</o> can be used to activate a velocity sensitive attack-decay-sustain-release envelope by connecting its outlet to the <o>crow</o> object.
+	</description>
+
+	<!--METADATA-->
+	<metadatalist>
+		<metadata name="author">Sam Wolk</metadata>
+		<metadata name="tag">crow</metadata>
+		<metadata name="tag">crow help</metadata>
+		<metadata name="tag">Eurorack</metadata>
+	</metadatalist>
+
+	<!--ARGUMENTS-->
+	<objarglist>
+		<objarg name="output" optional="0" type="int">
+            <digest>
+				Hardware output index (1-4)
+			</digest>
+			<description>
+				Specifies which output will generate an envelope.
+			</description>
+        </objarg>
+		<objarg name="peak" optional="1" type="float">
+            <digest>
+				Sets the voltage at end of attack (volts)
+			</digest>
+			<description>
+				Sets the voltage at the end of the attack phase.  Can be used to create velocity-sensitive envelopes.
+			</description>
+        </objarg>
+		<objarg name="attack" optional="1" type="float">
+            <digest>
+				Duration of attack phase (seconds)
+			</digest>
+			<description>
+				Sets the duration of the attack phase in seconds. 
+			</description>
+        </objarg>
+		<objarg name="decay" optional="1" type="float">
+            <digest>
+				Duration of decay phase (seconds)
+			</digest>
+			<description>
+				Sets the duration of the decay phase in seconds. 
+			</description>
+        </objarg>
+		<objarg name="sustain" optional="1" type="float">
+            <digest>
+				Sets the sustain voltage (volts)
+			</digest>
+			<description>
+				Sets the voltage which is sustained after the decay phase completes.
+			</description>
+        </objarg>
+		<objarg name="release" optional="1" type="float">
+            <digest>
+				Duration of release phase (seconds)
+			</digest>
+			<description>
+				Sets the duration of the release phase in seconds. 
+			</description>
+        </objarg>
+	</objarglist>
+
+	<!--MESSAGES-->
+	<methodlist>
+		<method name="anything">
+			<arglist>
+				<arg name="input" optional="0" />
+			</arglist>
+			<digest>
+				non-zero activates envelope, 0 releases. 
+			</digest>
+			<description>
+				Any non-zero value activates the envelope.  0 initiates the release phase.
+			</description>
+		</method>
+		<method name="int">
+			<arglist>
+				<arg name="input" optional="0" type = "int" />
+			</arglist>
+			<digest>
+				non-zero activates envelope, 0 releases. 
+			</digest>
+			<description>
+				Any non-zero value activates the envelope.  0 initiates the release phase.
+			</description>
+		</method>
+	</methodlist>
+
+	<!--DISCUSSION-->
+	<discussion>
+	</discussion>
+
+	<!--SEEALSO-->
+	<seealsolist>
+		<seealso name="crow"/>
+		<seealso name="crow.ar"/>		
+		<seealso name="crow.volts"/>
+		<seealso name="crow.var"/>
+		<seealso name="crow.function"/>
+		<seealso name="crow.n2v"/>
+		<seealso name="crow.inputs"/>
+
+		
+		
+	</seealsolist>
+
+	
+
+</c74object>

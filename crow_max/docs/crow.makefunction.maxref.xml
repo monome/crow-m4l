@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml-stylesheet href="./c74ref.xsl" type="text/xsl"?>
+
+<c74object name="crow.makefunction" module="crow">
+
+	<digest>
+		Create a function which can be used to make a calculation.  
+	</digest>
+
+	<description>
+		<o>crow.makefunction</o> can be used to generate an anonymous function which returns the value of <o>crow.makefunction</o>'s input at runtime.
+	</description>
+
+	<!--METADATA-->
+	<metadatalist>
+		<metadata name="author">Sam Wolk</metadata>
+		<metadata name="tag">crow</metadata>
+		<metadata name="tag">crow help</metadata>
+		<metadata name="tag">Eurorack</metadata>
+	</metadatalist>
+
+	<!--ARGUMENTS-->
+	<objarglist>
+	
+	</objarglist>
+
+	<!--MESSAGES-->
+	<methodlist>
+	
+	</methodlist>
+
+	<!--DISCUSSION-->
+	<discussion>
+	</discussion>
+
+	<!--SEEALSO-->
+	<seealsolist>
+		<seealso name="crow"/>
+		<seealso name="crow.volts"/>
+		<seealso name="crow.function"/>
+		<seealso name="crow.var"/>
+		<seealso name="crow.inputs"/>
+		<seealso name="crow.n2v"/>
+		<seealso name="crow.adsr"/>		
+		<seealso name="crow.ar"/>
+		
+	</seealsolist>
+
+	
+
+</c74object>

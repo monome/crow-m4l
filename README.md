@@ -25,6 +25,23 @@ To access, instantiate `crow` and right-click the object. Select "Open crow Help
 - **i2c**: demonstrates i2c connectivity + simple interactions with Just Friends (Whimsical Raps). this seemed the most interesting application, though the fundamental approach is translatable to any i2c device that has pre-defined Teletype interactions (w/, ER-301, Ansible, etc).
 - **^^**: an index of system commands that report on connected hardware + flash new scripts to the module.
 
+### The [crow.] library
+
+![crow. library](/images/crowdot.png)
+
+
+
+In addition to the `crow` object, there are many helper objects which can aid in development of crow Max and Max for Live applications. each object comes with its own help-patcher and built in Max reference page.
+
+- `crow.volts`: directly set one of crow's outputs to a voltage (with an optional slew time)
+- `crow.inputs`: a bpatcher gui to easily access data from crow's inputs within Max
+- `crow.ar`: easily configure and trigger an attack-release envelope on any of crow's outputs
+- `crow.adsr`: easily configure and trigger an ADSR envelope on one of crow's outputs
+- `crow.var`: assign a value, table, variable, or function return to a variable (or to an element of a table)
+- `crow.function`: tell crow to execute a function, or generate a function call to pass to another `crow.` object.
+- `crow.makefunction`: convert a value, variable, or function call into an anonymous function that returns the original value/variable/function call.
+- `crow.n2v`: convert semitones to V/oct voltage levels.
+
 ### The standalone ^^bootloader patch
 To help make flashing new crow firmware easy, we've included a straightforward Max patch that walks through the necessary steps:
 

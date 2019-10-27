@@ -76,12 +76,17 @@ end
 --- Helper conversion functions
 
 function tell_crow( str )
-	if string.find( str, "^%^%^" ) then -- crow command
-		outlet(0, string_to_serial( string.sub( str, 1, 3)))
-	else -- code block
-		-- print(string.len(str))
-		outlet(0, string_to_serial( str))
-	end
+
+    if string.find( str, "^%^%^" ) then -- crow command
+        outlet(0, string_to_serial( string.sub( str, 1, 3)))
+    elseif string.len(str) >= 63 then -- multi-line codeblock
+        outlet(0, string_to_serial( '```'))
+        outlet(0, string_to_serial( str))
+        outlet(0, string_to_serial( '```'))
+    else -- standard code block
+        -- print(string.len(str))
+        outlet(0, string_to_serial( str))
+    end
 end
 
 function string_to_serial( str )

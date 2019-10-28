@@ -4,7 +4,7 @@
 <c74object name="crow.var" module="crow">
 
 	<digest>
-		Assign values to a variable on the crow.
+		Assign values to a variable on crow.
 	</digest>
 
 	<description>
@@ -60,29 +60,27 @@
                 <arg name="value" optional="0" type="symbol" />
             </arglist>
             <digest>
-                String to store
+                String or Lua chunk to store
             </digest>
 			<description>
-				A symbol sent to the left inlet will be converted to a string and stored in the specified variable.
+				A symbol sent to the left inlet will be stored in the specified variable.  If the symbol is wrapped in single quotes (i.e. <m>'foo'</m>, it will be treated as a string.  If it is not wrapped in quotes (i.e. <m>myVar</m> or <m>math.random(2)</m>), or wrapped in double quotes (i.e. <m>"lfo(2,3)"</m>), it will be treated as Lua code (i.e. a variable or a function call).  
 			</description>
         </method>
-		<method name="var">
-            <arglist>
-                <arg name="variable-name" optional="0" type="symbol" />
-            </arglist>
-            <digest>
-                Store a variable in the the variable addressed by <o>crow.var</o>.
-            </digest>
-			<description>
-				The word <m>var</m> followed by a valid variable name stores the name of that variable in <o>crow.var</o>'s current variable.  For instance, if <o>crow.var</o> is set to <m>input[1].change</m>, then sending <m>var myFunction</m> to <o>crow.var</o>'s first inlet would be equivalent to executing the Lua code <m>input[1].change = myFunction</m>.
-			</description>
-        </method>
+		
 		<method name="table">
             <digest>
-                Overwrite the variable addressed by <o>crow.var</o> with an empty table.
+                Set the variable to an empty table
             </digest>
 			<description>
 				The word <m>table</m>, when sent to <o>crow.var</o>'s first inlet, will overwrite <o>crow.var</o>'s specified variable with an empty table (i.e. <m>myVar = { }</m>).
+			</description>
+        </method>
+		<method name="list">
+            <digest>
+                Convert a list to a table and store it.
+            </digest>
+			<description>
+				A message with more than one element will be converted to a table where the first index in the table is the first element in the list, and so on.  Symbols are treated the same as when sending a single symbol: single-quotes for strings, no-quotes or double-quotes for Lua.
 			</description>
         </method>
 		<method name="index">
@@ -97,8 +95,6 @@
 				The word <m>index</m> followed by an integer <m>index</m> and any <m>value</m>, when sent to <o>crow.var</o>'s first inlet, will write the value to the specified index in the table assigned to <o>crow.var</o>'s variable. 
 				For instance, if <o>crow.var</o> is set to <m>myTable</m>, then <m>index 6 2.4</m> is equivalent to the Lua chunk <m>myTable[6] = 2.4</m>. 
 				<br/><br/>NB: symbols are treated as variable names; symbols must be wrapped in single quotes to be treated as strings.
-			
-				
 				</description>
         </method>
 		<method name="keyval">
@@ -113,7 +109,6 @@
 				The word <m>keyval</m> followed by a <m>key</m> and a <m>value</m>, when sent to <o>crow.var</o>'s first inlet, will write the value to the specified key in the table assigned to <o>crow.var</o>'s variable.
 				For instance, if <o>crow.var</o> is set to <m>myTable</m>, then <m>keyval someKey 2.4</m> is equivalent to the Lua chunk <m>myTable.someKey = 2.4</m>. 
 				 <br/><br/>NB: symbols are treated as variable names; symbols must be wrapped in single quotes to be treated as strings.
-			
 			</description>
         </method>
 	</methodlist>

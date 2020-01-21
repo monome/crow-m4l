@@ -6,7 +6,7 @@ After downloading the entire `crow-max-and-m4l` repo, extract the zip file and y
 
 Open `Max` > `Options` > `File Preferences` > highlight `User Library` > the rightmost icon in the bottom bar should illuminate. Clicking this icon will open the User Library folder, where you can drop the `crow_max` folder.
 
-If you are performing an update of an existing `crow_max` installation, you can simply allow the system to replace the existing files. If you somehow have previous **beta** crow files in your User Library (or anywhere along your Max search path), please delete them and start fresh with `crow_max`.
+If you are performing an update of an existing `crow_max` installation, you can simply allow the system to replace the existing files. If you have previous crow files in your User Library (or anywhere along your Max search path), please delete them and start fresh with `crow_max`.
 
 Restart Max and you should be able to instantiate the `crow` abstraction as a regular object!
 

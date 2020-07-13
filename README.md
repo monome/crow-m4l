@@ -11,4 +11,5 @@ If you are performing an update of an existing `crow_max` installation, you can 
 Restart Max and you should be able to instantiate the `crow` abstraction as a regular object!
 
 ### Getting started with crow + Max
-https://monome.org/docs/crow/max-m4l/
+
+See bundled PDF.

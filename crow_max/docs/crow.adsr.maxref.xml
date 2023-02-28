@@ -8,12 +8,12 @@
 	</digest>
 
 	<description>
-		<o>crow.adsr</o> can be used to activate a velocity sensitive attack-decay-sustain-release envelope by connecting its outlet to the <o>crow</o> object.
+		<o>crow.adsr</o> can be used to activate a velocity sensitive attack-decay-sustain-release envelope on the crow hardware module by connecting its outlet to the <o>crow</o> object.
 	</description>
 
 	<!--METADATA-->
 	<metadatalist>
-		<metadata name="author">Sam Wolk</metadata>
+		<metadata name="author">Sam Wolk + Dan Derks</metadata>
 		<metadata name="tag">crow</metadata>
 		<metadata name="tag">crow help</metadata>
 		<metadata name="tag">Eurorack</metadata>
@@ -69,21 +69,28 @@
 				Sets the duration of the release phase in seconds. 
 			</description>
         </objarg>
+		<objarg name="shape" optional="1" type="symbol">
+            <digest>
+				Shape (symbol)
+			</digest>
+			<description>
+				Sets the shape of the voltage journey.
+				<br/> <br/>  SHAPES:
+				<br/> <m>linear</m>
+				<br/> <m>sine</m> 
+				<br/> <m>logarithmic</m> 
+				<br/> <m>exponential</m> 
+				<br/> <m>now</m> (go instantly to the destination then wait) 
+				<br/> <m>wait</m> (wait at the current level, then go to the destination)
+				<br/> <m>over</m> (move toward the destination and overshoot, before landing)
+				<br/> <m>under</m> (move away from the destination, then smoothly ramp up)
+				<br/> <m>rebound</m> (emulate a bouncing ball toward the destination)
+			</description>
+        </objarg>
 	</objarglist>
 
 	<!--MESSAGES-->
 	<methodlist>
-		<method name="anything">
-			<arglist>
-				<arg name="input" optional="0" />
-			</arglist>
-			<digest>
-				non-zero activates envelope, 0 releases. 
-			</digest>
-			<description>
-				Any non-zero value activates the envelope.  0 initiates the release phase.
-			</description>
-		</method>
 		<method name="int">
 			<arglist>
 				<arg name="input" optional="0" type = "int" />
@@ -109,6 +116,7 @@
 		<seealso name="crow.var"/>
 		<seealso name="crow.function"/>
 		<seealso name="crow.n2v"/>
+		<seealso name="crow.dyn"/>	
 		<seealso name="crow.inputs"/>
 
 		

@@ -8,7 +8,7 @@
 	</digest>
 
 	<description>
-		Connect to the crow haerdware module via USB: send and receive CV, talk to other devices connected to crow via I2C, send Lua chunks to execute immediately, and send scripts to load into crow's flash. 
+		Connect to the crow hardware module via USB: send and receive CV, talk to other devices connected to crow via I2C, send Lua chunks to execute immediately, and send scripts to load into crow's flash. 
 	</description>
 
 	<!--METADATA-->

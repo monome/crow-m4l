@@ -88,6 +88,44 @@
 						"assistshowspatchername" : 0,
 						"boxes" : [ 							{
 								"box" : 								{
+									"bubble" : 1,
+									"id" : "obj-31",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 683.0, 390.0, 52.0, 24.0 ],
+									"text" : "peak"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"bubble" : 1,
+									"bubbleside" : 3,
+									"fontface" : 0,
+									"id" : "obj-29",
+									"maxclass" : "comment",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 434.0, 358.0, 103.0, 24.0 ],
+									"text" : "change values"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-28",
+									"maxclass" : "button",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "bang" ],
+									"parameter_enable" : 0,
+									"patching_rect" : [ 652.0, 390.0, 24.0, 24.0 ]
+								}
+
+							}
+, 							{
+								"box" : 								{
 									"hidden" : 1,
 									"id" : "obj-18",
 									"maxclass" : "message",
@@ -120,7 +158,7 @@
 
 									}
 ,
-									"text" : "What's a bpatcher?",
+									"text" : "what's a bpatcher?",
 									"varname" : "live.text[1]"
 								}
 
@@ -175,7 +213,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 755.0, 380.0, 125.0, 51.0 ],
+									"patching_rect" : [ 820.0, 376.5, 125.0, 51.0 ],
 									"text" : "send CV to crow's second input jack to control this dial"
 								}
 
@@ -189,7 +227,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "float" ],
 									"parameter_enable" : 1,
-									"patching_rect" : [ 716.0, 382.0, 46.0, 48.0 ],
+									"patching_rect" : [ 781.0, 378.5, 46.0, 48.0 ],
 									"saved_attribute_attributes" : 									{
 										"valueof" : 										{
 											"parameter_initial" : [ 0 ],
@@ -217,7 +255,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 607.0, 365.0, 24.0, 24.0 ]
+									"patching_rect" : [ 607.0, 389.0, 24.0, 24.0 ]
 								}
 
 							}
@@ -229,7 +267,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 539.0, 365.0, 24.0, 24.0 ]
+									"patching_rect" : [ 539.0, 389.0, 24.0, 24.0 ]
 								}
 
 							}
@@ -339,7 +377,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 466.5, 401.0, 117.0, 64.0 ],
+									"patching_rect" : [ 466.5, 425.0, 117.0, 64.0 ],
 									"text" : "send triggers to crow's first input jack to advance this counter"
 								}
 
@@ -377,7 +415,7 @@
 									"numoutlets" : 2,
 									"outlettype" : [ "", "bang" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 589.0, 468.0, 50.0, 22.0 ]
+									"patching_rect" : [ 589.0, 492.0, 50.0, 22.0 ]
 								}
 
 							}
@@ -413,7 +451,7 @@
 									"numinlets" : 3,
 									"numoutlets" : 3,
 									"outlettype" : [ "bang", "bang", "" ],
-									"patching_rect" : [ 539.0, 334.0, 119.0, 22.0 ],
+									"patching_rect" : [ 539.0, 358.0, 119.0, 22.0 ],
 									"text" : "sel 0 1"
 								}
 
@@ -425,7 +463,7 @@
 									"numinlets" : 5,
 									"numoutlets" : 4,
 									"outlettype" : [ "int", "", "", "int" ],
-									"patching_rect" : [ 589.0, 422.0, 69.0, 22.0 ],
+									"patching_rect" : [ 589.0, 446.0, 69.0, 22.0 ],
 									"text" : "counter 1 8"
 								}
 
@@ -456,16 +494,24 @@
 									"maxclass" : "bpatcher",
 									"name" : "crow.inputs.maxpat",
 									"numinlets" : 0,
-									"numoutlets" : 4,
+									"numoutlets" : 6,
 									"offset" : [ 0.0, 0.0 ],
-									"outlettype" : [ "", "", "", "" ],
-									"patching_rect" : [ 539.0, 196.0, 196.0, 114.0 ],
+									"outlettype" : [ "", "", "", "", "", "" ],
+									"patching_rect" : [ 539.0, 196.0, 196.0, 156.0 ],
 									"viewvisibility" : 1
 								}
 
 							}
  ],
 						"lines" : [ 							{
+								"patchline" : 								{
+									"destination" : [ "obj-28", 0 ],
+									"midpoints" : [ 619.299999999999955, 370.5, 661.5, 370.5 ],
+									"source" : [ "obj-1", 2 ]
+								}
+
+							}
+, 							{
 								"patchline" : 								{
 									"destination" : [ "obj-39", 0 ],
 									"source" : [ "obj-1", 3 ]
@@ -656,19 +702,33 @@
 			"obj-14::obj-16" : [ "live.text[3]", "live.text[2]", 0 ],
 			"obj-14::obj-1::obj-28" : [ "live.tab", "live.tab", 0 ],
 			"obj-14::obj-1::obj-55::obj-1" : [ "2 Smooth[1]", "Smooth", 0 ],
+			"obj-14::obj-1::obj-55::obj-17" : [ "live.numbox[6]", "live.numbox", 0 ],
 			"obj-14::obj-1::obj-55::obj-18" : [ "2 Stream Rate[1]", "Rate", 0 ],
 			"obj-14::obj-1::obj-55::obj-21" : [ "2 Input Mode[1]", "Input Mode", 0 ],
 			"obj-14::obj-1::obj-55::obj-22" : [ "2 Direction[1]", "Direction", 0 ],
+			"obj-14::obj-1::obj-55::obj-36" : [ "2 Volume Rate", "Rate", 0 ],
+			"obj-14::obj-1::obj-55::obj-43" : [ "2 Peak Hysteresis", "Hysteresis", 0 ],
 			"obj-14::obj-1::obj-55::obj-45" : [ "2 Hysteresis[1]", "Hysteresis", 0 ],
 			"obj-14::obj-1::obj-55::obj-46" : [ "2 Threshold[1]", "Threshold", 0 ],
+			"obj-14::obj-1::obj-55::obj-48" : [ "2 Volume Smooth", "Smooth", 0 ],
+			"obj-14::obj-1::obj-55::obj-49" : [ "live.numbox[4]", "live.numbox", 0 ],
 			"obj-14::obj-1::obj-55::obj-54" : [ "live.numbox[2]", "live.numbox", 0 ],
+			"obj-14::obj-1::obj-55::obj-58" : [ "2 Peak Threshold", "Threshold", 0 ],
+			"obj-14::obj-1::obj-55::obj-61" : [ "2 Volume Rate[1]", "Rate", 0 ],
 			"obj-14::obj-1::obj-56::obj-1" : [ "1 Smooth[1]", "Smooth", 0 ],
+			"obj-14::obj-1::obj-56::obj-17" : [ "live.numbox[5]", "live.numbox", 0 ],
 			"obj-14::obj-1::obj-56::obj-18" : [ "1 Stream Rate[1]", "Rate", 0 ],
 			"obj-14::obj-1::obj-56::obj-21" : [ "1 Input Mode[1]", "Input Mode", 0 ],
 			"obj-14::obj-1::obj-56::obj-22" : [ "1 Direction[1]", "Direction", 0 ],
+			"obj-14::obj-1::obj-56::obj-36" : [ "1 Volume Rate", "Rate", 0 ],
+			"obj-14::obj-1::obj-56::obj-43" : [ "1 Peak Hysteresis", "Hysteresis", 0 ],
 			"obj-14::obj-1::obj-56::obj-45" : [ "1 Hysteresis[1]", "Hysteresis", 0 ],
 			"obj-14::obj-1::obj-56::obj-46" : [ "1 Threshold[1]", "Threshold", 0 ],
+			"obj-14::obj-1::obj-56::obj-48" : [ "1 Volume Smooth", "Smooth", 0 ],
+			"obj-14::obj-1::obj-56::obj-49" : [ "live.numbox[1]", "live.numbox", 0 ],
 			"obj-14::obj-1::obj-56::obj-54" : [ "live.numbox[3]", "live.numbox", 0 ],
+			"obj-14::obj-1::obj-56::obj-58" : [ "1 Peak Threshold", "Threshold", 0 ],
+			"obj-14::obj-1::obj-56::obj-61" : [ "1 Volume Rate[1]", "Rate", 0 ],
 			"obj-14::obj-21" : [ "live.text[4]", "live.text[1]", 0 ],
 			"obj-14::obj-39" : [ "live.dial[1]", "In 2 CV", 0 ],
 			"parameterbanks" : 			{
@@ -680,12 +740,21 @@
 					"parameter_longname" : "2 Smooth[1]"
 				}
 ,
+				"obj-14::obj-1::obj-55::obj-17" : 				{
+					"parameter_longname" : "live.numbox[6]"
+				}
+,
 				"obj-14::obj-1::obj-55::obj-18" : 				{
 					"parameter_longname" : "2 Stream Rate[1]"
 				}
 ,
 				"obj-14::obj-1::obj-55::obj-21" : 				{
-					"parameter_longname" : "2 Input Mode[1]"
+					"parameter_invisible" : 0,
+					"parameter_longname" : "2 Input Mode[1]",
+					"parameter_modmode" : 0,
+					"parameter_range" : [ "none", "stream", "change", "volume", "peak", "-" ],
+					"parameter_type" : 2,
+					"parameter_unitstyle" : 9
 				}
 ,
 				"obj-14::obj-1::obj-55::obj-22" : 				{
@@ -700,12 +769,24 @@
 					"parameter_longname" : "2 Threshold[1]"
 				}
 ,
+				"obj-14::obj-1::obj-55::obj-49" : 				{
+					"parameter_longname" : "live.numbox[4]"
+				}
+,
 				"obj-14::obj-1::obj-55::obj-54" : 				{
 					"parameter_longname" : "live.numbox[2]"
 				}
 ,
+				"obj-14::obj-1::obj-55::obj-61" : 				{
+					"parameter_longname" : "2 Volume Rate[1]"
+				}
+,
 				"obj-14::obj-1::obj-56::obj-1" : 				{
 					"parameter_longname" : "1 Smooth[1]"
+				}
+,
+				"obj-14::obj-1::obj-56::obj-17" : 				{
+					"parameter_longname" : "live.numbox[5]"
 				}
 ,
 				"obj-14::obj-1::obj-56::obj-18" : 				{
@@ -713,7 +794,12 @@
 				}
 ,
 				"obj-14::obj-1::obj-56::obj-21" : 				{
-					"parameter_longname" : "1 Input Mode[1]"
+					"parameter_invisible" : 0,
+					"parameter_longname" : "1 Input Mode[1]",
+					"parameter_modmode" : 0,
+					"parameter_range" : [ "none", "stream", "change", "volume", "peak", "freq" ],
+					"parameter_type" : 2,
+					"parameter_unitstyle" : 9
 				}
 ,
 				"obj-14::obj-1::obj-56::obj-22" : 				{
@@ -730,6 +816,10 @@
 ,
 				"obj-14::obj-1::obj-56::obj-54" : 				{
 					"parameter_longname" : "live.numbox[3]"
+				}
+,
+				"obj-14::obj-1::obj-56::obj-61" : 				{
+					"parameter_longname" : "1 Volume Rate[1]"
 				}
 
 			}

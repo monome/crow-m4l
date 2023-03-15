@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <?xml-stylesheet href="./c74ref.xsl" type="text/xsl"?>
 
-<c74object name="crow.makefunction" module="crow">
+<c74object name="crow.dyn" module="crow">
 
 	<digest>
-		Create a function which can be used to make a calculation.  
+		Quickly format a dynamic variable.  
 	</digest>
 
 	<description>
-		<o>crow.makefunction</o> can be used to generate an anonymous function which returns the value of <o>crow.makefunction</o>'s input at runtime.
+		<o>crow.dyn</o> can be used to format a variable that can be updated by Max and will be used by a running ASL ('A Slope Language') action.<br/>
 	</description>
 
 	<!--METADATA-->
 	<metadatalist>
-		<metadata name="author">Sam Wolk</metadata>
+		<metadata name="author">Sam Wolk + Dan Derks</metadata>
 		<metadata name="tag">crow</metadata>
 		<metadata name="tag">crow help</metadata>
 		<metadata name="tag">Eurorack</metadata>

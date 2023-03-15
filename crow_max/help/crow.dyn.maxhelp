@@ -125,12 +125,12 @@
 								"box" : 								{
 									"bubble" : 1,
 									"id" : "obj-33",
-									"linecount" : 2,
+									"linecount" : 3,
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 73.5, 139.25, 224.0, 37.0 ],
-									"text" : "Create an anonymous lua function which returns x"
+									"patching_rect" : [ 96.5, 139.25, 224.0, 51.0 ],
+									"text" : "Create an dynamic variable and assign it a starting value (must be formatted with quotation marks!)"
 								}
 
 							}
@@ -295,7 +295,7 @@
 									"filename" : "helpdetails.js",
 									"id" : "obj-7",
 									"ignoreclick" : 1,
-									"jsarguments" : [ "crow.makefunction" ],
+									"jsarguments" : [ "crow.dyn" ],
 									"maxclass" : "jsui",
 									"numinlets" : 1,
 									"numoutlets" : 1,
@@ -408,8 +408,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 31.5, 236.25, 134.0, 22.0 ],
-									"text" : "dyn{x}"
+									"patching_rect" : [ 42.0, 233.5, 77.0, 22.0 ],
+									"text" : "\"dyn{x = 10}\""
 								}
 
 							}
@@ -420,8 +420,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 42.0, 144.0, 29.5, 22.0 ],
-									"text" : "x"
+									"patching_rect" : [ 42.0, 149.5, 50.0, 22.0 ],
+									"text" : "\"x = 10\""
 								}
 
 							}
@@ -433,8 +433,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 42.0, 185.75, 113.0, 22.0 ],
-									"text" : "crow.makeFunction"
+									"patching_rect" : [ 42.0, 185.75, 56.0, 22.0 ],
+									"text" : "crow.dyn"
 								}
 
 							}
@@ -482,8 +482,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 507.0, 255.75, 113.0, 22.0 ],
-									"text" : "crow.makeFunction"
+									"patching_rect" : [ 507.0, 255.75, 56.0, 22.0 ],
+									"text" : "crow.dyn"
 								}
 
 							}
@@ -545,8 +545,8 @@
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 382.0, 255.75, 113.0, 22.0 ],
-									"text" : "crow.makeFunction"
+									"patching_rect" : [ 382.0, 255.75, 56.0, 22.0 ],
+									"text" : "crow.dyn"
 								}
 
 							}
@@ -852,14 +852,14 @@
 		}
 ,
 		"dependency_cache" : [ 			{
-				"name" : "crow.function.maxpat",
+				"name" : "crow.dyn.maxpat",
 				"bootpath" : "~/Documents/Max 8/Library/crow_max/abstractions",
 				"patcherrelativepath" : "../abstractions",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "crow.makefunction.maxpat",
+				"name" : "crow.function.maxpat",
 				"bootpath" : "~/Documents/Max 8/Library/crow_max/abstractions",
 				"patcherrelativepath" : "../abstractions",
 				"type" : "JSON",

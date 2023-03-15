@@ -3,14 +3,14 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 8,
-			"minor" : 0,
+			"minor" : 5,
 			"revision" : 3,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 995.0, 82.0, 500.0, 960.0 ],
+		"openrect" : [ 0.0, 66.0, 219.0, 301.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -26,17 +26,18 @@
 		"toptoolbarpinned" : 0,
 		"righttoolbarpinned" : 0,
 		"bottomtoolbarpinned" : 0,
-		"toolbars_unpinned_last_save" : 0,
+		"toolbars_unpinned_last_save" : 15,
 		"tallnewobj" : 0,
 		"boxanimatetime" : 200,
 		"enablehscroll" : 1,
 		"enablevscroll" : 1,
-		"devicewidth" : 0.0,
+		"devicewidth" : 219.0,
 		"description" : "",
 		"digest" : "",
 		"tags" : "",
 		"style" : "",
 		"subpatcher_template" : "",
+		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
 					"comment" : "root note (semitones)",
@@ -47,7 +48,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 213.0, 37.0, 30.0, 30.0 ]
+					"patching_rect" : [ 137.0, 32.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -59,7 +60,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 121.0, 249.0, 30.0, 30.0 ]
+					"patching_rect" : [ 45.0, 244.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -70,7 +71,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "float" ],
-					"patching_rect" : [ 121.0, 79.0, 19.0, 22.0 ],
+					"patching_rect" : [ 45.0, 74.0, 19.0, 22.0 ],
 					"text" : "t f"
 				}
 
@@ -84,7 +85,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 121.0, 37.0, 30.0, 30.0 ]
+					"patching_rect" : [ 45.0, 32.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -95,7 +96,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "float" ],
-					"patching_rect" : [ 121.0, 158.0, 87.0, 22.0 ],
+					"patching_rect" : [ 45.0, 153.0, 87.0, 22.0 ],
 					"text" : "/ 12."
 				}
 
@@ -107,7 +108,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
-					"patching_rect" : [ 121.0, 116.0, 110.5, 22.0 ],
+					"patching_rect" : [ 45.0, 111.0, 110.5, 22.0 ],
 					"text" : "- #1"
 				}
 

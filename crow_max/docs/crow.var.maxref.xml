@@ -8,12 +8,12 @@
 	</digest>
 
 	<description>
-		Specify a variable to address as <o>crow.var</o>'s first argument.  Connect the output of <o>crow.var</o> to the input of the <o>crow</o> object.  Values sent to <o>crow.var</o> will be sent to the crow eurorack module and stored in the specified variable.  
+		Specify a script variable to address as <o>crow.var</o>'s first argument.  Connect the output of <o>crow.var</o> to the input of the <o>crow</o> object.  Values sent to <o>crow.var</o> will be sent to the crow hardware module and stored in the specified variable.  
 	</description>
 
 	<!--METADATA-->
 	<metadatalist>
-		<metadata name="author">Sam Wolk</metadata>
+		<metadata name="author">Sam Wolk + Dan Derks</metadata>
 		<metadata name="tag">crow</metadata>
 		<metadata name="tag">crow help</metadata>
 		<metadata name="tag">Eurorack</metadata>
@@ -126,6 +126,7 @@
 		<seealso name="crow.adsr"/>
 		<seealso name="crow.ar"/>
 		<seealso name="crow.n2v"/>		
+		<seealso name="crow.dyn"/>	
 	</seealsolist>
 
 	

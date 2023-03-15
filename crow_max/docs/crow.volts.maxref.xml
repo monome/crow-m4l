@@ -4,16 +4,16 @@
 <c74object name="crow.volts" module="crow">
 
 	<digest>
-		Set CV output values on crow
+		Set CV output values on crow.
 	</digest>
 
 	<description>
-		Connect <o>crow.volts</o> to the <o>crow</o> Max object to control the CV outputs on the crow eurorack module.
+		Connect <o>crow.volts</o> to the <o>crow</o> Max object to control the CV outputs on the crow module.
 	</description>
 
 	<!--METADATA-->
 	<metadatalist>
-		<metadata name="author">Sam Wolk</metadata>
+		<metadata name="author">Sam Wolk + Dan Derks</metadata>
 		<metadata name="tag">crow</metadata>
 		<metadata name="tag">crow help</metadata>
 		<metadata name="tag">Eurorack</metadata>
@@ -29,6 +29,11 @@
 		<objarg name="slew" optional="1" type="float">
             <digest>
 				Time in seconds
+			</digest>
+        </objarg>
+		<objarg name="shape" optional="1" type="symbol">
+            <digest>
+				Shape of voltage journey
 			</digest>
         </objarg>
 	</objarglist>
@@ -62,12 +67,23 @@
 				<arg name="index" optional="0" type="int" />
 				<arg name="voltage" optional="1" type="float" />
 				<arg name="slew" optional="1" type="float" />
+				<arg name="shape" optional="1" type="symbol" />
 			</arglist>
 			<digest>
-				Set hardware output, target voltage, and slew time
+				Set hardware output, target voltage, slew time, and voltage shape
 			</digest>
 			<description>
-				The word <m>channel</m>, followed by an output index (1-4), a voltage (in volts, float, optional), and a slew  time (in seconds, float) (optional), sets the selected output to the target voltage in the specified amount of time.
+				The word <m>channel</m>, followed by an output index (1-4), a voltage (in volts, float, optional), a slew  time (in seconds, float) (optional), and a shape (eg. linear or sine, symbol) (optional), sets the selected output to the target voltage in the specified amount of time along the specified shape.
+				<br/> <br/>  SHAPES:
+				<br/> <m>linear</m>
+				<br/> <m>sine</m> 
+				<br/> <m>logarithmic</m> 
+				<br/> <m>exponential</m> 
+				<br/> <m>now</m> (go instantly to the destination then wait) 
+				<br/> <m>wait</m> (wait at the current level, then go to the destination)
+				<br/> <m>over</m> (move toward the destination and overshoot, before landing)
+				<br/> <m>under</m> (move away from the destination, then smoothly ramp up)
+				<br/> <m>rebound</m> (emulate a bouncing ball toward the destination)
 			</description>
 		</method>
 		<method name="bang">
@@ -93,6 +109,7 @@
 		<seealso name="crow.adsr"/>
 		<seealso name="crow.ar"/>
 		<seealso name="crow.n2v"/>	
+		<seealso name="crow.dyn"/>	
 	</seealsolist>
 
 	

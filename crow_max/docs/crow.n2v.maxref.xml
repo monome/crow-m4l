@@ -13,7 +13,7 @@
 
 	<!--METADATA-->
 	<metadatalist>
-		<metadata name="author">Sam Wolk</metadata>
+		<metadata name="author">Sam Wolk + Dan Derks</metadata>
 		<metadata name="tag">crow</metadata>
 		<metadata name="tag">crow help</metadata>
 		<metadata name="tag">Eurorack</metadata>
@@ -70,6 +70,7 @@
 		<seealso name="crow.inputs"/>
 		<seealso name="crow.adsr"/>
 		<seealso name="crow.ar"/>
+		<seealso name="crow.dyn"/>	
 		
 		
 	</seealsolist>

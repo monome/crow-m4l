@@ -4,16 +4,16 @@
 <c74object name="crow.ar" module="crow">
 
 	<digest>
-		Trigger AR envelopes on crow
+		Trigger AR envelopes on crow.
 	</digest>
 
 	<description>
-		Connect <o>crow.ar</o> to the <o>crow</o> Max object, then send bangs or messages to <o>crow.ar</o> to generate attack-release (AR) envelopes on the crow Eurorack module.
+		Connect <o>crow.ar</o> to the <o>crow</o> Max object, then send bangs or messages to <o>crow.ar</o> to generate attack-release (AR) envelopes on the crow hardware module.
 	</description>
 
 	<!--METADATA-->
 	<metadatalist>
-		<metadata name="author">Sam Wolk</metadata>
+		<metadata name="author">Sam Wolk + Dan Derks</metadata>
 		<metadata name="tag">crow</metadata>
 		<metadata name="tag">crow help</metadata>
 		<metadata name="tag">Eurorack</metadata>
@@ -28,18 +28,26 @@
         </objarg>
 		<objarg name="attack" optional="1" type="float">
             <digest>
-				Time in seconds
+				Duration of attack phase (seconds)
 			</digest>
         </objarg>
 		<objarg name="release" optional="1" type="float">
             <digest>
-				Time in seconds
+				Duration of release phase (seconds)
 			</digest>
         </objarg>
 		<objarg name="peak" optional="1" type="float">
             <digest>
-				Amplitude of envelope (in volts)
+				Amplitude of envelope (volts)
 			</digest>
+        </objarg>
+		<objarg name="shape" optional="1" type="symbol">
+            <digest>
+				Shape (symbol)
+			</digest>
+			<description>
+				Sets the shape of the voltage journey. 
+			</description>
         </objarg>
 	</objarglist>
 
@@ -53,26 +61,15 @@
 				A bang sent to the first inlet will trigger an envelope.
 			</description>
         </method>
-		<method name="float">
+		<method name="int / float">
 			<arglist>
-				<arg name="input" optional="0" type="int" />
+				<arg name="input" optional="0" type="int/float" />
 			</arglist>
 			<digest>
 				Set peak level then trigger envelope.
 			</digest>
 			<description>
-				Sending a number to <o>crow.ar</o>'s first inlet will trigger an AR envelope with the peak-level set by the number.  The attack, release, and hardware output will use the same settings as the last generated envelope.
-			</description>
-		</method>
-		<method name="float">
-			<arglist>
-				<arg name="input" optional="0" type="float" />
-			</arglist>
-			<digest>
-				Set peak level then trigger envelope.
-			</digest>
-			<description>
-				Sending a number to <o>crow.ar</o>'s first inlet will trigger an AR envelope with the peak-level set by the number.  The attack, release, and hardware output will be the same as the last generated envelope.
+				Sending a number to <o>crow.ar</o>'s first inlet will trigger an AR envelope with the peak-level set by the number.  The attack, release, shape, and hardware output will use the same settings as the last generated envelope.
 			</description>
 		</method>
 		<method name="attack">
@@ -83,7 +80,7 @@
 				Set attack time then trigger envelope.
 			</digest>
 			<description>
-				Sending the word <m>attack</m> followed by a number to <o>crow.ar</o>'s first inlet will trigger an AR envelope with the attack time set by the number.  The peak-level, release time, and hardware output will be the same as the last generated envelope.
+				Sending the word <m>attack</m> followed by a number to <o>crow.ar</o>'s first inlet will trigger an AR envelope with the attack time set by the number.  The peak-level, release time,shape, and hardware output will be the same as the last generated envelope.
 			</description>
 		</method>
 		<method name="release">
@@ -94,7 +91,7 @@
 				Set release time then trigger envelope.
 			</digest>
 			<description>
-				Sending the word <m>release</m> followed by a number to <o>crow.ar</o>'s first inlet will trigger an AR envelope with the release time set by the number.  The peak-level, attack time, and hardware output will be the same as the last generated envelope.
+				Sending the word <m>release</m> followed by a number to <o>crow.ar</o>'s first inlet will trigger an AR envelope with the release time set by the number.  The peak-level, attack time, shape, and hardware output will be the same as the last generated envelope.
 			</description>
 		</method>
 		<method name="channel">
@@ -106,6 +103,27 @@
 			</digest>
 			<description>
 				Sending the word <m>channel</m> followed by an index (1-4) to <o>crow.ar</o>'s first inlet will trigger an AR envelope on crow's specified hardware output.  The attack time, release time, and peak level be the same as the last generated envelope.
+			</description>
+		</method>
+		<method name="shape">
+			<arglist>
+				<arg name="input" optional="0" type="symbol" />
+			</arglist>
+			<digest>
+				Hardware output index (1-4)
+			</digest>
+			<description>
+				Sending the word <m>shape</m> followed by a symbol (see below) to <o>crow.ar</o>'s first inlet will trigger an AR envelope with the specified shape.  The attack time, release time, and peak level be the same as the last generated envelope.
+				<br/> <br/>  SHAPES:
+				<br/> <m>linear</m>
+				<br/> <m>sine</m> 
+				<br/> <m>logarithmic</m> 
+				<br/> <m>exponential</m> 
+				<br/> <m>now</m> (go instantly to the destination then wait) 
+				<br/> <m>wait</m> (wait at the current level, then go to the destination)
+				<br/> <m>over</m> (move toward the destination and overshoot, before landing)
+				<br/> <m>under</m> (move away from the destination, then smoothly ramp up)
+				<br/> <m>rebound</m> (emulate a bouncing ball toward the destination)
 			</description>
 		</method>
 	</methodlist>
@@ -122,6 +140,7 @@
 		<seealso name="crow.inputs"/>
 		<seealso name="crow.adsr"/>
 		<seealso name="crow.n2v"/>	
+		<seealso name="crow.dyn"/>	
 		<seealso name="crow.inputs"/>
 
 	</seealsolist>
